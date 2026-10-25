@@ -1,0 +1,3 @@
+C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/f6_database.dir
+C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/edit_cache.dir
+C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/rebuild_cache.dir
