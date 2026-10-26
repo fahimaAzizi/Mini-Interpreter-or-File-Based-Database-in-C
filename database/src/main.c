@@ -16,6 +16,86 @@ typedef struct {
     size_t count;
 } Database;
 
+int db_save(const Database *db, const char *filename)
+{
+    if (db == NULL || filename == NULL || filename[0] == '\0') {
+        return 0;
+    }
+
+    FILE *file = fopen(filename, "w");
+
+    if (file == NULL) {
+        perror("Could not open database file");
+        return 0;
+    }
+
+    for (size_t i = 0; i < db->count; i++) {
+        if (fprintf(file, "%s\t%s\n",
+                    db->records[i].key,
+                    db->records[i].value) < 0) {
+            fclose(file);
+            return 0;
+        }
+    }
+
+    if (fclose(file) != 0) {
+        return 0;
+    }
+
+    return 1;
+}
+int db_load(Database *db, const char *filename)
+{
+    if (db == NULL || filename == NULL || filename[0] == '\0') {
+        return 0;
+    }
+
+    FILE *file = fopen(filename, "r");
+
+    if (file == NULL) {
+        perror("Could not open database file");
+        return 0;
+    }
+
+    Database loaded = {0};
+    char line[MAX_KEY_LENGTH + MAX_VALUE_LENGTH + 2];
+
+    while (fgets(line, sizeof(line), file) != NULL) {
+        size_t length = strlen(line);
+
+        if (length > 0 && line[length - 1] == '\n') {
+            line[length - 1] = '\0';
+        }
+
+        char *separator = strchr(line, '\t');
+
+        if (separator == NULL) {
+            fclose(file);
+            return 0;
+        }
+
+        *separator = '\0';
+
+        if (!db_create(&loaded, line, separator + 1)) {
+            fclose(file);
+            return 0;
+        }
+    }
+
+    if (ferror(file)) {
+        fclose(file);
+        return 0;
+    }
+
+    if (fclose(file) != 0) {
+        return 0;
+    }
+
+    *db = loaded;
+    return 1;
+}
+
+
 /* Add a new record to the database. */
 int db_create(Database *db, const char *key, const char *value)
 {
