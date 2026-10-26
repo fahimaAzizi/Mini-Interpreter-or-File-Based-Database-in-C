@@ -65,6 +65,47 @@ int db_read(const Database *db, const char *key,
     return 0;
 }
 
+/* Update the value of an existing record. */
+int db_update(Database *db, const char *key, const char *new_value)
+{
+    if (db == NULL || key == NULL || new_value == NULL ||
+        key[0] == '\0' ||
+        strlen(new_value) >= MAX_VALUE_LENGTH) {
+        return 0;
+    }
+
+    for (size_t i = 0; i < db->count; i++) {
+        if (strcmp(db->records[i].key, key) == 0) {
+            strcpy(db->records[i].value, new_value);
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+/* Delete a record and close the gap in the array. */
+int db_delete(Database *db, const char *key)
+{
+    if (db == NULL || key == NULL || key[0] == '\0') {
+        return 0;
+    }
+
+    for (size_t i = 0; i < db->count; i++) {
+        if (strcmp(db->records[i].key, key) == 0) {
+            for (size_t j = i; j + 1 < db->count; j++) {
+                db->records[j] = db->records[j + 1];
+            }
+
+            db->count--;
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+
 int main(void)
 {
     Database db = {0};
