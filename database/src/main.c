@@ -186,13 +186,35 @@ int db_delete(Database *db, const char *key)
 }
 
 
+
 int main(void)
 {
     Database db = {0};
     char output[MAX_VALUE_LENGTH];
+    const char *filename = "database.dat";
 
-    if (!db_create(&db, "name", "Fahima")) {
-        fprintf(stderr, "Error: Could not create record.\n");
+    /* Load existing records, or start with an empty database. */
+    FILE *check = fopen(filename, "r");
+
+    if (check != NULL) {
+        fclose(check);
+
+        if (!db_load(&db, filename)) {
+            fprintf(stderr, "Error: Could not load database.\n");
+            return 1;
+        }
+    }
+
+    /* Create a sample record only if it does not exist. */
+    if (!db_read(&db, "name", output, sizeof(output))) {
+        if (!db_create(&db, "name", "Fahima")) {
+            fprintf(stderr, "Error: Could not create record.\n");
+            return 1;
+        }
+    }
+
+    if (!db_save(&db, filename)) {
+        fprintf(stderr, "Error: Could not save database.\n");
         return 1;
     }
 
@@ -200,10 +222,9 @@ int main(void)
         printf("Key: name\n");
         printf("Value: %s\n", output);
         printf("Total records: %zu\n", db.count);
-    } else {
-        fprintf(stderr, "Error: Could not read record.\n");
-        return 1;
     }
+
+    printf("Database saved to %s\n", filename);
 
     return 0;
 }
