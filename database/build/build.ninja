@@ -36,19 +36,58 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/build/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target f6_database_lib
+
+
+#############################################
+# Order-only phony target for f6_database_lib
+
+build cmake_object_order_depends_target_f6_database_lib: phony || .
+
+build CMakeFiles/f6_database_lib.dir/src/database.c.obj: C_COMPILER__f6_database_lib_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/src/database.c || cmake_object_order_depends_target_f6_database_lib
+  DEP_FILE = CMakeFiles\f6_database_lib.dir\src\database.c.obj.d
+  FLAGS = -std=c11 -Wall -Wextra -Wpedantic
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src"
+  OBJECT_DIR = CMakeFiles\f6_database_lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\f6_database_lib.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\f6_database_lib.dir\f6_database_lib.pdb
+  TARGET_PDB = libf6_database_lib.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\f6_database_lib.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target f6_database_lib
+
+
+#############################################
+# Link the static library libf6_database_lib.a
+
+build libf6_database_lib.a: C_STATIC_LIBRARY_LINKER__f6_database_lib_ CMakeFiles/f6_database_lib.dir/src/database.c.obj
+  OBJECT_DIR = CMakeFiles\f6_database_lib.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\f6_database_lib.dir\f6_database_lib.pdb
+  TARGET_FILE = libf6_database_lib.a
+  TARGET_PDB = libf6_database_lib.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\f6_database_lib.dir
+
+# =============================================================================
 # Object build statements for EXECUTABLE target f6_database
 
 
 #############################################
 # Order-only phony target for f6_database
 
-build cmake_object_order_depends_target_f6_database: phony || .
+build cmake_object_order_depends_target_f6_database: phony || cmake_object_order_depends_target_f6_database_lib
 
 build CMakeFiles/f6_database.dir/src/main.c.obj: C_COMPILER__f6_database_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/src/main.c || cmake_object_order_depends_target_f6_database
   DEP_FILE = CMakeFiles\f6_database.dir\src\main.c.obj.d
   FLAGS = -std=c11
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src"
   OBJECT_DIR = CMakeFiles\f6_database.dir
   OBJECT_FILE_DIR = CMakeFiles\f6_database.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\f6_database.dir\
+  TARGET_PDB = f6_database.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\f6_database.dir
 
 
@@ -59,15 +98,66 @@ build CMakeFiles/f6_database.dir/src/main.c.obj: C_COMPILER__f6_database_unscann
 #############################################
 # Link the executable f6_database.exe
 
-build f6_database.exe: C_EXECUTABLE_LINKER__f6_database_ CMakeFiles/f6_database.dir/src/main.c.obj
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build f6_database.exe: C_EXECUTABLE_LINKER__f6_database_ CMakeFiles/f6_database.dir/src/main.c.obj | libf6_database_lib.a || libf6_database_lib.a
+  LINK_LIBRARIES = libf6_database_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\f6_database.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\f6_database.dir\
   TARGET_FILE = f6_database.exe
   TARGET_IMPLIB = libf6_database.dll.a
-  TARGET_PDB = f6_database.exe.dbg
+  TARGET_PDB = f6_database.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\f6_database.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_database
+
+
+#############################################
+# Order-only phony target for test_database
+
+build cmake_object_order_depends_target_test_database: phony || cmake_object_order_depends_target_f6_database_lib
+
+build CMakeFiles/test_database.dir/tests/test_database.c.obj: C_COMPILER__test_database_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/tests/test_database.c || cmake_object_order_depends_target_test_database
+  DEP_FILE = CMakeFiles\test_database.dir\tests\test_database.c.obj.d
+  FLAGS = -std=c11
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src"
+  OBJECT_DIR = CMakeFiles\test_database.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_database.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\test_database.dir\
+  TARGET_PDB = test_database.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_database.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_database
+
+
+#############################################
+# Link the executable test_database.exe
+
+build test_database.exe: C_EXECUTABLE_LINKER__test_database_ CMakeFiles/test_database.dir/tests/test_database.c.obj | libf6_database_lib.a || libf6_database_lib.a
+  LINK_LIBRARIES = libf6_database_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\test_database.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_database.dir\
+  TARGET_FILE = test_database.exe
+  TARGET_IMPLIB = libtest_database.dll.a
+  TARGET_PDB = test_database.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_database.dir
+
+
+#############################################
+# Utility command for test
+
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Mcm\OneDrive\Desktop\Mini Interpreter or File-Based Database in C\database\build" && "C:\Program Files\CMake\bin\ctest.exe" "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles/test.util
 
 
 #############################################
@@ -98,6 +188,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build f6_database: phony f6_database.exe
 
+build f6_database_lib: phony libf6_database_lib.a
+
+build test_database: phony test_database.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -106,7 +200,7 @@ build f6_database: phony f6_database.exe
 #############################################
 # Folder: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
 
-build all: phony f6_database.exe
+build all: phony libf6_database_lib.a f6_database.exe test_database.exe
 
 # =============================================================================
 # Built-in targets
@@ -115,14 +209,14 @@ build all: phony f6_database.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/build/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.0-rc2/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeRCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeSystem.cmake
+build build.ninja C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/build/cmake_install.cmake C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/build/CTestTestfile.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PellesC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.0-rc2/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeRCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.0-rc2/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeRCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PellesC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/database/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.0-rc2/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeRCCompiler.cmake CMakeFiles/4.4.0-rc2/CMakeSystem.cmake: phony
 
 
 #############################################

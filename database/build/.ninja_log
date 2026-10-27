@@ -1,11 +1,12 @@
 # ninja log v7
-28	189	8146548155524305	CMakeFiles/f6_database.dir/src/main.c.obj	cbfc08e472b69eae
-190	424	8146548157065084	f6_database.exe	2c4960f4571152d8
-38	1113	8147374982181662	CMakeFiles/f6_database.dir/src/main.c.obj	cbfc08e472b69eae
-1115	1615	8147374993025346	f6_database.exe	2c4960f4571152d8
-23	260	8147376689270274	CMakeFiles/f6_database.dir/src/main.c.obj	cbfc08e472b69eae
-262	520	8147376691611780	f6_database.exe	2c4960f4571152d8
-6	524	8147384291164079	CMakeFiles/f6_database.dir/src/main.c.obj	cbfc08e472b69eae
-525	865	8147384296319023	f6_database.exe	2c4960f4571152d8
-61	854	8148298918225834	CMakeFiles/f6_database.dir/src/main.c.obj	cbfc08e472b69eae
-857	1407	8148298926186832	f6_database.exe	2c4960f4571152d8
+42	239	8148304618123583	CMakeFiles/f6_database.dir/src/main.c.obj	9278fe24722d8212
+610	935	8148304623807618	f6_database.exe	6980a7149a1cd252
+52	192	8148304618224899	CMakeFiles/test_database.dir/tests/test_database.c.obj	98d402c4f5d5b5da
+36	226	8148304618063250	CMakeFiles/f6_database_lib.dir/src/database.c.obj	fd9d01d014b8eaa4
+226	610	8148304619969195	libf6_database_lib.a	153545be42347fbe
+40	906	8148307367221383	CMakeFiles/f6_database_lib.dir/src/database.c.obj	d20274b37ec00687
+175	952	8148307368539186	CMakeFiles/test_database.dir/tests/test_database.c.obj	e9c0b571a1ddfe20
+165	964	8148307368539186	CMakeFiles/f6_database.dir/src/main.c.obj	936e7d70dfed169e
+907	1423	8148307375863475	libf6_database_lib.a	fbaedc3368f2e059
+1423	2147	8148307381083339	f6_database.exe	63781417bddfc0cf
+1439	2148	8148307381250116	test_database.exe	abb5c497e093ea77

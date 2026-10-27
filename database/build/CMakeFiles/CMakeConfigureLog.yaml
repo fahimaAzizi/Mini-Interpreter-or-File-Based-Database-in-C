@@ -5,14 +5,14 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Windows - 10.0.22621 - AMD64
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Program used to build from build.ninja files."
@@ -208,7 +208,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -268,10 +268,10 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/MinGW/bin/gcc.exe 
+      Compiler: C:/msys64/ucrt64/bin/gcc.exe 
       Build flags: 
       Id flags:  
       
@@ -289,7 +289,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -304,7 +304,7 @@ events:
     names:
       - "ar"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -314,9 +314,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -325,8 +325,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/ar.com"
-    found: "C:/MinGW/bin/ar.exe"
+      - "C:/msys64/ucrt64/bin/ar.com"
+    found: "C:/msys64/ucrt64/bin/ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -369,7 +369,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -384,7 +384,7 @@ events:
     names:
       - "ranlib"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -394,9 +394,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -405,8 +405,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/ranlib.com"
-    found: "C:/MinGW/bin/ranlib.exe"
+      - "C:/msys64/ucrt64/bin/ranlib.com"
+    found: "C:/msys64/ucrt64/bin/ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -449,7 +449,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -464,7 +464,7 @@ events:
     names:
       - "strip"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -474,9 +474,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -485,8 +485,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/strip.com"
-    found: "C:/MinGW/bin/strip.exe"
+      - "C:/msys64/ucrt64/bin/strip.com"
+    found: "C:/msys64/ucrt64/bin/strip.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -529,7 +529,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -544,7 +544,7 @@ events:
     names:
       - "ld"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -554,9 +554,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -565,8 +565,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/ld.com"
-    found: "C:/MinGW/bin/ld.exe"
+      - "C:/msys64/ucrt64/bin/ld.com"
+    found: "C:/msys64/ucrt64/bin/ld.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -609,7 +609,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -624,7 +624,7 @@ events:
     names:
       - "nm"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -634,9 +634,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -645,8 +645,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/nm.com"
-    found: "C:/MinGW/bin/nm.exe"
+      - "C:/msys64/ucrt64/bin/nm.com"
+    found: "C:/msys64/ucrt64/bin/nm.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -689,7 +689,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -704,7 +704,7 @@ events:
     names:
       - "objdump"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -714,9 +714,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -725,8 +725,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/objdump.com"
-    found: "C:/MinGW/bin/objdump.exe"
+      - "C:/msys64/ucrt64/bin/objdump.com"
+    found: "C:/msys64/ucrt64/bin/objdump.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -769,7 +769,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -784,7 +784,7 @@ events:
     names:
       - "objcopy"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -794,9 +794,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -805,8 +805,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/objcopy.com"
-    found: "C:/MinGW/bin/objcopy.exe"
+      - "C:/msys64/ucrt64/bin/objcopy.com"
+    found: "C:/msys64/ucrt64/bin/objcopy.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -849,7 +849,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -864,7 +864,7 @@ events:
     names:
       - "readelf"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -874,9 +874,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -885,8 +885,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/readelf.com"
-    found: "C:/MinGW/bin/readelf.exe"
+      - "C:/msys64/ucrt64/bin/readelf.com"
+    found: "C:/msys64/ucrt64/bin/readelf.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -929,7 +929,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -944,7 +944,7 @@ events:
     names:
       - "dlltool"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -954,9 +954,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -965,8 +965,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/dlltool.com"
-    found: "C:/MinGW/bin/dlltool.exe"
+      - "C:/msys64/ucrt64/bin/dlltool.com"
+    found: "C:/msys64/ucrt64/bin/dlltool.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -1009,7 +1009,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -1024,7 +1024,7 @@ events:
     names:
       - "addr2line"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -1034,9 +1034,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -1045,8 +1045,8 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/addr2line.com"
-    found: "C:/MinGW/bin/addr2line.exe"
+      - "C:/msys64/ucrt64/bin/addr2line.com"
+    found: "C:/msys64/ucrt64/bin/addr2line.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -1089,7 +1089,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -1104,7 +1104,7 @@ events:
     names:
       - "tapi"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -1114,9 +1114,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -1125,9 +1125,9 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/tapi.com"
-      - "C:/MinGW/bin/tapi.exe"
-      - "C:/MinGW/bin/tapi"
+      - "C:/msys64/ucrt64/bin/tapi.com"
+      - "C:/msys64/ucrt64/bin/tapi.exe"
+      - "C:/msys64/ucrt64/bin/tapi"
       - "C:/Program Files/PowerShell/7/tapi.com"
       - "C:/Program Files/PowerShell/7/tapi.exe"
       - "C:/Program Files/PowerShell/7/tapi"
@@ -1155,15 +1155,15 @@ events:
       - "C:/Program Files/nodejs/tapi.com"
       - "C:/Program Files/nodejs/tapi.exe"
       - "C:/Program Files/nodejs/tapi"
+      - "C:/MinGW/bin/tapi.com"
+      - "C:/MinGW/bin/tapi.exe"
+      - "C:/MinGW/bin/tapi"
       - "C:/Program Files/dotnet/tapi.com"
       - "C:/Program Files/dotnet/tapi.exe"
       - "C:/Program Files/dotnet/tapi"
       - "C:/Program Files/CMake/bin/tapi.com"
       - "C:/Program Files/CMake/bin/tapi.exe"
       - "C:/Program Files/CMake/bin/tapi"
-      - "C:/msys64/ucrt64/bin/tapi.com"
-      - "C:/msys64/ucrt64/bin/tapi.exe"
-      - "C:/msys64/ucrt64/bin/tapi"
       - "C:/Program Files/GitHub CLI/tapi.com"
       - "C:/Program Files/GitHub CLI/tapi.exe"
       - "C:/Program Files/GitHub CLI/tapi"
@@ -1228,7 +1228,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1241,12 +1241,12 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "gcc-ar-6.3"
-      - "gcc-ar-6"
-      - "gcc-ar6"
+      - "gcc-ar-16.1"
+      - "gcc-ar-16"
+      - "gcc-ar16"
       - "gcc-ar"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -1256,9 +1256,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -1267,188 +1267,188 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/gcc-ar-6.3.com"
-      - "C:/MinGW/bin/gcc-ar-6.3.exe"
-      - "C:/MinGW/bin/gcc-ar-6.3"
-      - "C:/Program Files/PowerShell/7/gcc-ar-6.3.com"
-      - "C:/Program Files/PowerShell/7/gcc-ar-6.3.exe"
-      - "C:/Program Files/PowerShell/7/gcc-ar-6.3"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-6.3.com"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-6.3.exe"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-6.3"
-      - "C:/Windows/System32/gcc-ar-6.3.com"
-      - "C:/Windows/System32/gcc-ar-6.3.exe"
-      - "C:/Windows/System32/gcc-ar-6.3"
-      - "C:/Windows/gcc-ar-6.3.com"
-      - "C:/Windows/gcc-ar-6.3.exe"
-      - "C:/Windows/gcc-ar-6.3"
-      - "C:/Windows/System32/wbem/gcc-ar-6.3.com"
-      - "C:/Windows/System32/wbem/gcc-ar-6.3.exe"
-      - "C:/Windows/System32/wbem/gcc-ar-6.3"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-6.3.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-6.3.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-6.3"
-      - "C:/Windows/System32/OpenSSH/gcc-ar-6.3.com"
-      - "C:/Windows/System32/OpenSSH/gcc-ar-6.3.exe"
-      - "C:/Windows/System32/OpenSSH/gcc-ar-6.3"
-      - "C:/Program Files/Git/cmd/gcc-ar-6.3.com"
-      - "C:/Program Files/Git/cmd/gcc-ar-6.3.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar-6.3"
-      - "C:/Program Files/nodejs/gcc-ar-6.3.com"
-      - "C:/Program Files/nodejs/gcc-ar-6.3.exe"
-      - "C:/Program Files/nodejs/gcc-ar-6.3"
-      - "C:/Program Files/dotnet/gcc-ar-6.3.com"
-      - "C:/Program Files/dotnet/gcc-ar-6.3.exe"
-      - "C:/Program Files/dotnet/gcc-ar-6.3"
-      - "C:/Program Files/CMake/bin/gcc-ar-6.3.com"
-      - "C:/Program Files/CMake/bin/gcc-ar-6.3.exe"
-      - "C:/Program Files/CMake/bin/gcc-ar-6.3"
-      - "C:/msys64/ucrt64/bin/gcc-ar-6.3.com"
-      - "C:/msys64/ucrt64/bin/gcc-ar-6.3.exe"
-      - "C:/msys64/ucrt64/bin/gcc-ar-6.3"
-      - "C:/Program Files/GitHub CLI/gcc-ar-6.3.com"
-      - "C:/Program Files/GitHub CLI/gcc-ar-6.3.exe"
-      - "C:/Program Files/GitHub CLI/gcc-ar-6.3"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-6.3.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-6.3.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-6.3"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-6.3.com"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-6.3.exe"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-6.3"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-6.3.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-6.3.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-6.3"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-6.3.com"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-6.3.exe"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-6.3"
-      - "C:/MinGW/gcc-ar-6.3.com"
-      - "C:/MinGW/gcc-ar-6.3.exe"
-      - "C:/MinGW/gcc-ar-6.3"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-6.3.com"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-6.3.exe"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-6.3"
-      - "C:/MinGW/bin/gcc-ar-6.com"
-      - "C:/MinGW/bin/gcc-ar-6.exe"
-      - "C:/MinGW/bin/gcc-ar-6"
-      - "C:/Program Files/PowerShell/7/gcc-ar-6.com"
-      - "C:/Program Files/PowerShell/7/gcc-ar-6.exe"
-      - "C:/Program Files/PowerShell/7/gcc-ar-6"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-6.com"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-6.exe"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-6"
-      - "C:/Windows/System32/gcc-ar-6.com"
-      - "C:/Windows/System32/gcc-ar-6.exe"
-      - "C:/Windows/System32/gcc-ar-6"
-      - "C:/Windows/gcc-ar-6.com"
-      - "C:/Windows/gcc-ar-6.exe"
-      - "C:/Windows/gcc-ar-6"
-      - "C:/Windows/System32/wbem/gcc-ar-6.com"
-      - "C:/Windows/System32/wbem/gcc-ar-6.exe"
-      - "C:/Windows/System32/wbem/gcc-ar-6"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-6.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-6.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-6"
-      - "C:/Windows/System32/OpenSSH/gcc-ar-6.com"
-      - "C:/Windows/System32/OpenSSH/gcc-ar-6.exe"
-      - "C:/Windows/System32/OpenSSH/gcc-ar-6"
-      - "C:/Program Files/Git/cmd/gcc-ar-6.com"
-      - "C:/Program Files/Git/cmd/gcc-ar-6.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar-6"
-      - "C:/Program Files/nodejs/gcc-ar-6.com"
-      - "C:/Program Files/nodejs/gcc-ar-6.exe"
-      - "C:/Program Files/nodejs/gcc-ar-6"
-      - "C:/Program Files/dotnet/gcc-ar-6.com"
-      - "C:/Program Files/dotnet/gcc-ar-6.exe"
-      - "C:/Program Files/dotnet/gcc-ar-6"
-      - "C:/Program Files/CMake/bin/gcc-ar-6.com"
-      - "C:/Program Files/CMake/bin/gcc-ar-6.exe"
-      - "C:/Program Files/CMake/bin/gcc-ar-6"
-      - "C:/msys64/ucrt64/bin/gcc-ar-6.com"
-      - "C:/msys64/ucrt64/bin/gcc-ar-6.exe"
-      - "C:/msys64/ucrt64/bin/gcc-ar-6"
-      - "C:/Program Files/GitHub CLI/gcc-ar-6.com"
-      - "C:/Program Files/GitHub CLI/gcc-ar-6.exe"
-      - "C:/Program Files/GitHub CLI/gcc-ar-6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-6"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-6.com"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-6.exe"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-6"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-6.com"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-6.exe"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-6"
-      - "C:/MinGW/gcc-ar-6.com"
-      - "C:/MinGW/gcc-ar-6.exe"
-      - "C:/MinGW/gcc-ar-6"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-6.com"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-6.exe"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-6"
-      - "C:/MinGW/bin/gcc-ar6.com"
-      - "C:/MinGW/bin/gcc-ar6.exe"
-      - "C:/MinGW/bin/gcc-ar6"
-      - "C:/Program Files/PowerShell/7/gcc-ar6.com"
-      - "C:/Program Files/PowerShell/7/gcc-ar6.exe"
-      - "C:/Program Files/PowerShell/7/gcc-ar6"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar6.com"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar6.exe"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar6"
-      - "C:/Windows/System32/gcc-ar6.com"
-      - "C:/Windows/System32/gcc-ar6.exe"
-      - "C:/Windows/System32/gcc-ar6"
-      - "C:/Windows/gcc-ar6.com"
-      - "C:/Windows/gcc-ar6.exe"
-      - "C:/Windows/gcc-ar6"
-      - "C:/Windows/System32/wbem/gcc-ar6.com"
-      - "C:/Windows/System32/wbem/gcc-ar6.exe"
-      - "C:/Windows/System32/wbem/gcc-ar6"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar6.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar6.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar6"
-      - "C:/Windows/System32/OpenSSH/gcc-ar6.com"
-      - "C:/Windows/System32/OpenSSH/gcc-ar6.exe"
-      - "C:/Windows/System32/OpenSSH/gcc-ar6"
-      - "C:/Program Files/Git/cmd/gcc-ar6.com"
-      - "C:/Program Files/Git/cmd/gcc-ar6.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar6"
-      - "C:/Program Files/nodejs/gcc-ar6.com"
-      - "C:/Program Files/nodejs/gcc-ar6.exe"
-      - "C:/Program Files/nodejs/gcc-ar6"
-      - "C:/Program Files/dotnet/gcc-ar6.com"
-      - "C:/Program Files/dotnet/gcc-ar6.exe"
-      - "C:/Program Files/dotnet/gcc-ar6"
-      - "C:/Program Files/CMake/bin/gcc-ar6.com"
-      - "C:/Program Files/CMake/bin/gcc-ar6.exe"
-      - "C:/Program Files/CMake/bin/gcc-ar6"
-      - "C:/msys64/ucrt64/bin/gcc-ar6.com"
-      - "C:/msys64/ucrt64/bin/gcc-ar6.exe"
-      - "C:/msys64/ucrt64/bin/gcc-ar6"
-      - "C:/Program Files/GitHub CLI/gcc-ar6.com"
-      - "C:/Program Files/GitHub CLI/gcc-ar6.exe"
-      - "C:/Program Files/GitHub CLI/gcc-ar6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar6"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar6.com"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar6.exe"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar6"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar6.com"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar6.exe"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar6"
-      - "C:/MinGW/gcc-ar6.com"
-      - "C:/MinGW/gcc-ar6.exe"
-      - "C:/MinGW/gcc-ar6"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar6.com"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar6.exe"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar6"
-      - "C:/MinGW/bin/gcc-ar.com"
-    found: "C:/MinGW/bin/gcc-ar.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ar-16.1.com"
+      - "C:/msys64/ucrt64/bin/gcc-ar-16.1.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ar-16.1"
+      - "C:/Program Files/PowerShell/7/gcc-ar-16.1.com"
+      - "C:/Program Files/PowerShell/7/gcc-ar-16.1.exe"
+      - "C:/Program Files/PowerShell/7/gcc-ar-16.1"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-16.1.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-16.1.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-16.1"
+      - "C:/Windows/System32/gcc-ar-16.1.com"
+      - "C:/Windows/System32/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/gcc-ar-16.1"
+      - "C:/Windows/gcc-ar-16.1.com"
+      - "C:/Windows/gcc-ar-16.1.exe"
+      - "C:/Windows/gcc-ar-16.1"
+      - "C:/Windows/System32/wbem/gcc-ar-16.1.com"
+      - "C:/Windows/System32/wbem/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/wbem/gcc-ar-16.1"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.1.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.1"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.1.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.1"
+      - "C:/Program Files/Git/cmd/gcc-ar-16.1.com"
+      - "C:/Program Files/Git/cmd/gcc-ar-16.1.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar-16.1"
+      - "C:/Program Files/nodejs/gcc-ar-16.1.com"
+      - "C:/Program Files/nodejs/gcc-ar-16.1.exe"
+      - "C:/Program Files/nodejs/gcc-ar-16.1"
+      - "C:/MinGW/bin/gcc-ar-16.1.com"
+      - "C:/MinGW/bin/gcc-ar-16.1.exe"
+      - "C:/MinGW/bin/gcc-ar-16.1"
+      - "C:/Program Files/dotnet/gcc-ar-16.1.com"
+      - "C:/Program Files/dotnet/gcc-ar-16.1.exe"
+      - "C:/Program Files/dotnet/gcc-ar-16.1"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.1.com"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.1.exe"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.1"
+      - "C:/Program Files/GitHub CLI/gcc-ar-16.1.com"
+      - "C:/Program Files/GitHub CLI/gcc-ar-16.1.exe"
+      - "C:/Program Files/GitHub CLI/gcc-ar-16.1"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-16.1.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-16.1.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-16.1"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.1.com"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.1.exe"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.1"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.1.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.1.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.1"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-16.1.com"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-16.1.exe"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-16.1"
+      - "C:/MinGW/gcc-ar-16.1.com"
+      - "C:/MinGW/gcc-ar-16.1.exe"
+      - "C:/MinGW/gcc-ar-16.1"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-16.1.com"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-16.1.exe"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-16.1"
+      - "C:/msys64/ucrt64/bin/gcc-ar-16.com"
+      - "C:/msys64/ucrt64/bin/gcc-ar-16.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ar-16"
+      - "C:/Program Files/PowerShell/7/gcc-ar-16.com"
+      - "C:/Program Files/PowerShell/7/gcc-ar-16.exe"
+      - "C:/Program Files/PowerShell/7/gcc-ar-16"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-16.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-16.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar-16"
+      - "C:/Windows/System32/gcc-ar-16.com"
+      - "C:/Windows/System32/gcc-ar-16.exe"
+      - "C:/Windows/System32/gcc-ar-16"
+      - "C:/Windows/gcc-ar-16.com"
+      - "C:/Windows/gcc-ar-16.exe"
+      - "C:/Windows/gcc-ar-16"
+      - "C:/Windows/System32/wbem/gcc-ar-16.com"
+      - "C:/Windows/System32/wbem/gcc-ar-16.exe"
+      - "C:/Windows/System32/wbem/gcc-ar-16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16"
+      - "C:/Program Files/Git/cmd/gcc-ar-16.com"
+      - "C:/Program Files/Git/cmd/gcc-ar-16.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar-16"
+      - "C:/Program Files/nodejs/gcc-ar-16.com"
+      - "C:/Program Files/nodejs/gcc-ar-16.exe"
+      - "C:/Program Files/nodejs/gcc-ar-16"
+      - "C:/MinGW/bin/gcc-ar-16.com"
+      - "C:/MinGW/bin/gcc-ar-16.exe"
+      - "C:/MinGW/bin/gcc-ar-16"
+      - "C:/Program Files/dotnet/gcc-ar-16.com"
+      - "C:/Program Files/dotnet/gcc-ar-16.exe"
+      - "C:/Program Files/dotnet/gcc-ar-16"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.com"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ar-16"
+      - "C:/Program Files/GitHub CLI/gcc-ar-16.com"
+      - "C:/Program Files/GitHub CLI/gcc-ar-16.exe"
+      - "C:/Program Files/GitHub CLI/gcc-ar-16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar-16"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.com"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.exe"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar-16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-16.com"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-16.exe"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar-16"
+      - "C:/MinGW/gcc-ar-16.com"
+      - "C:/MinGW/gcc-ar-16.exe"
+      - "C:/MinGW/gcc-ar-16"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-16.com"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-16.exe"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar-16"
+      - "C:/msys64/ucrt64/bin/gcc-ar16.com"
+      - "C:/msys64/ucrt64/bin/gcc-ar16.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ar16"
+      - "C:/Program Files/PowerShell/7/gcc-ar16.com"
+      - "C:/Program Files/PowerShell/7/gcc-ar16.exe"
+      - "C:/Program Files/PowerShell/7/gcc-ar16"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar16.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar16.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ar16"
+      - "C:/Windows/System32/gcc-ar16.com"
+      - "C:/Windows/System32/gcc-ar16.exe"
+      - "C:/Windows/System32/gcc-ar16"
+      - "C:/Windows/gcc-ar16.com"
+      - "C:/Windows/gcc-ar16.exe"
+      - "C:/Windows/gcc-ar16"
+      - "C:/Windows/System32/wbem/gcc-ar16.com"
+      - "C:/Windows/System32/wbem/gcc-ar16.exe"
+      - "C:/Windows/System32/wbem/gcc-ar16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar16"
+      - "C:/Windows/System32/OpenSSH/gcc-ar16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ar16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ar16"
+      - "C:/Program Files/Git/cmd/gcc-ar16.com"
+      - "C:/Program Files/Git/cmd/gcc-ar16.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar16"
+      - "C:/Program Files/nodejs/gcc-ar16.com"
+      - "C:/Program Files/nodejs/gcc-ar16.exe"
+      - "C:/Program Files/nodejs/gcc-ar16"
+      - "C:/MinGW/bin/gcc-ar16.com"
+      - "C:/MinGW/bin/gcc-ar16.exe"
+      - "C:/MinGW/bin/gcc-ar16"
+      - "C:/Program Files/dotnet/gcc-ar16.com"
+      - "C:/Program Files/dotnet/gcc-ar16.exe"
+      - "C:/Program Files/dotnet/gcc-ar16"
+      - "C:/Program Files/CMake/bin/gcc-ar16.com"
+      - "C:/Program Files/CMake/bin/gcc-ar16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ar16"
+      - "C:/Program Files/GitHub CLI/gcc-ar16.com"
+      - "C:/Program Files/GitHub CLI/gcc-ar16.exe"
+      - "C:/Program Files/GitHub CLI/gcc-ar16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ar16"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar16.com"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar16.exe"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ar16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar16"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar16.com"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar16.exe"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ar16"
+      - "C:/MinGW/gcc-ar16.com"
+      - "C:/MinGW/gcc-ar16.exe"
+      - "C:/MinGW/gcc-ar16"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar16.com"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar16.exe"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ar16"
+      - "C:/msys64/ucrt64/bin/gcc-ar.com"
+    found: "C:/msys64/ucrt64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -1491,7 +1491,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1504,12 +1504,12 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "gcc-ranlib-6.3"
-      - "gcc-ranlib-6"
-      - "gcc-ranlib6"
+      - "gcc-ranlib-16.1"
+      - "gcc-ranlib-16"
+      - "gcc-ranlib16"
       - "gcc-ranlib"
     candidate_directories:
-      - "C:/MinGW/bin/"
+      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/PowerShell/7/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
@@ -1519,9 +1519,9 @@ events:
       - "C:/Windows/System32/OpenSSH/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/nodejs/"
+      - "C:/MinGW/bin/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
-      - "C:/msys64/ucrt64/bin/"
       - "C:/Program Files/GitHub CLI/"
       - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/"
@@ -1530,188 +1530,188 @@ events:
       - "C:/MinGW/"
       - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/"
     searched_directories:
-      - "C:/MinGW/bin/gcc-ranlib-6.3.com"
-      - "C:/MinGW/bin/gcc-ranlib-6.3.exe"
-      - "C:/MinGW/bin/gcc-ranlib-6.3"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib-6.3.com"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib-6.3.exe"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib-6.3"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-6.3.com"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-6.3.exe"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-6.3"
-      - "C:/Windows/System32/gcc-ranlib-6.3.com"
-      - "C:/Windows/System32/gcc-ranlib-6.3.exe"
-      - "C:/Windows/System32/gcc-ranlib-6.3"
-      - "C:/Windows/gcc-ranlib-6.3.com"
-      - "C:/Windows/gcc-ranlib-6.3.exe"
-      - "C:/Windows/gcc-ranlib-6.3"
-      - "C:/Windows/System32/wbem/gcc-ranlib-6.3.com"
-      - "C:/Windows/System32/wbem/gcc-ranlib-6.3.exe"
-      - "C:/Windows/System32/wbem/gcc-ranlib-6.3"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-6.3.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-6.3.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-6.3"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib-6.3.com"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib-6.3.exe"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib-6.3"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-6.3.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-6.3.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-6.3"
-      - "C:/Program Files/nodejs/gcc-ranlib-6.3.com"
-      - "C:/Program Files/nodejs/gcc-ranlib-6.3.exe"
-      - "C:/Program Files/nodejs/gcc-ranlib-6.3"
-      - "C:/Program Files/dotnet/gcc-ranlib-6.3.com"
-      - "C:/Program Files/dotnet/gcc-ranlib-6.3.exe"
-      - "C:/Program Files/dotnet/gcc-ranlib-6.3"
-      - "C:/Program Files/CMake/bin/gcc-ranlib-6.3.com"
-      - "C:/Program Files/CMake/bin/gcc-ranlib-6.3.exe"
-      - "C:/Program Files/CMake/bin/gcc-ranlib-6.3"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib-6.3.com"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib-6.3.exe"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib-6.3"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib-6.3.com"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib-6.3.exe"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib-6.3"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-6.3.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-6.3.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-6.3"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-6.3.com"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-6.3.exe"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-6.3"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-6.3.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-6.3.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-6.3"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-6.3.com"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-6.3.exe"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-6.3"
-      - "C:/MinGW/gcc-ranlib-6.3.com"
-      - "C:/MinGW/gcc-ranlib-6.3.exe"
-      - "C:/MinGW/gcc-ranlib-6.3"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-6.3.com"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-6.3.exe"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-6.3"
-      - "C:/MinGW/bin/gcc-ranlib-6.com"
-      - "C:/MinGW/bin/gcc-ranlib-6.exe"
-      - "C:/MinGW/bin/gcc-ranlib-6"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib-6.com"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib-6.exe"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib-6"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-6.com"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-6.exe"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-6"
-      - "C:/Windows/System32/gcc-ranlib-6.com"
-      - "C:/Windows/System32/gcc-ranlib-6.exe"
-      - "C:/Windows/System32/gcc-ranlib-6"
-      - "C:/Windows/gcc-ranlib-6.com"
-      - "C:/Windows/gcc-ranlib-6.exe"
-      - "C:/Windows/gcc-ranlib-6"
-      - "C:/Windows/System32/wbem/gcc-ranlib-6.com"
-      - "C:/Windows/System32/wbem/gcc-ranlib-6.exe"
-      - "C:/Windows/System32/wbem/gcc-ranlib-6"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-6.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-6.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-6"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib-6.com"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib-6.exe"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib-6"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-6.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-6.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-6"
-      - "C:/Program Files/nodejs/gcc-ranlib-6.com"
-      - "C:/Program Files/nodejs/gcc-ranlib-6.exe"
-      - "C:/Program Files/nodejs/gcc-ranlib-6"
-      - "C:/Program Files/dotnet/gcc-ranlib-6.com"
-      - "C:/Program Files/dotnet/gcc-ranlib-6.exe"
-      - "C:/Program Files/dotnet/gcc-ranlib-6"
-      - "C:/Program Files/CMake/bin/gcc-ranlib-6.com"
-      - "C:/Program Files/CMake/bin/gcc-ranlib-6.exe"
-      - "C:/Program Files/CMake/bin/gcc-ranlib-6"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib-6.com"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib-6.exe"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib-6"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib-6.com"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib-6.exe"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib-6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-6"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-6.com"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-6.exe"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-6"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-6.com"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-6.exe"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-6"
-      - "C:/MinGW/gcc-ranlib-6.com"
-      - "C:/MinGW/gcc-ranlib-6.exe"
-      - "C:/MinGW/gcc-ranlib-6"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-6.com"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-6.exe"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-6"
-      - "C:/MinGW/bin/gcc-ranlib6.com"
-      - "C:/MinGW/bin/gcc-ranlib6.exe"
-      - "C:/MinGW/bin/gcc-ranlib6"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib6.com"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib6.exe"
-      - "C:/Program Files/PowerShell/7/gcc-ranlib6"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib6.com"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib6.exe"
-      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib6"
-      - "C:/Windows/System32/gcc-ranlib6.com"
-      - "C:/Windows/System32/gcc-ranlib6.exe"
-      - "C:/Windows/System32/gcc-ranlib6"
-      - "C:/Windows/gcc-ranlib6.com"
-      - "C:/Windows/gcc-ranlib6.exe"
-      - "C:/Windows/gcc-ranlib6"
-      - "C:/Windows/System32/wbem/gcc-ranlib6.com"
-      - "C:/Windows/System32/wbem/gcc-ranlib6.exe"
-      - "C:/Windows/System32/wbem/gcc-ranlib6"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib6.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib6.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib6"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib6.com"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib6.exe"
-      - "C:/Windows/System32/OpenSSH/gcc-ranlib6"
-      - "C:/Program Files/Git/cmd/gcc-ranlib6.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib6.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib6"
-      - "C:/Program Files/nodejs/gcc-ranlib6.com"
-      - "C:/Program Files/nodejs/gcc-ranlib6.exe"
-      - "C:/Program Files/nodejs/gcc-ranlib6"
-      - "C:/Program Files/dotnet/gcc-ranlib6.com"
-      - "C:/Program Files/dotnet/gcc-ranlib6.exe"
-      - "C:/Program Files/dotnet/gcc-ranlib6"
-      - "C:/Program Files/CMake/bin/gcc-ranlib6.com"
-      - "C:/Program Files/CMake/bin/gcc-ranlib6.exe"
-      - "C:/Program Files/CMake/bin/gcc-ranlib6"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib6.com"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib6.exe"
-      - "C:/msys64/ucrt64/bin/gcc-ranlib6"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib6.com"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib6.exe"
-      - "C:/Program Files/GitHub CLI/gcc-ranlib6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib6"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib6.com"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib6.exe"
-      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib6"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib6.com"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib6.exe"
-      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib6"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib6.com"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib6.exe"
-      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib6"
-      - "C:/MinGW/gcc-ranlib6.com"
-      - "C:/MinGW/gcc-ranlib6.exe"
-      - "C:/MinGW/gcc-ranlib6"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib6.com"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib6.exe"
-      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib6"
-      - "C:/MinGW/bin/gcc-ranlib.com"
-    found: "C:/MinGW/bin/gcc-ranlib.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib-16.1.com"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib-16.1.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib-16.1"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib-16.1.com"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib-16.1"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-16.1.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-16.1.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-16.1"
+      - "C:/Windows/System32/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/gcc-ranlib-16.1"
+      - "C:/Windows/gcc-ranlib-16.1.com"
+      - "C:/Windows/gcc-ranlib-16.1.exe"
+      - "C:/Windows/gcc-ranlib-16.1"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.1"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.1"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.1"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-16.1.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-16.1"
+      - "C:/Program Files/nodejs/gcc-ranlib-16.1.com"
+      - "C:/Program Files/nodejs/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/nodejs/gcc-ranlib-16.1"
+      - "C:/MinGW/bin/gcc-ranlib-16.1.com"
+      - "C:/MinGW/bin/gcc-ranlib-16.1.exe"
+      - "C:/MinGW/bin/gcc-ranlib-16.1"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.1.com"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.1"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.1.com"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.1"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib-16.1.com"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib-16.1"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-16.1.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-16.1.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-16.1"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.1.com"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.1.exe"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.1"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.1.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.1.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.1"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-16.1.com"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-16.1.exe"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-16.1"
+      - "C:/MinGW/gcc-ranlib-16.1.com"
+      - "C:/MinGW/gcc-ranlib-16.1.exe"
+      - "C:/MinGW/gcc-ranlib-16.1"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-16.1.com"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-16.1.exe"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-16.1"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib-16.com"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib-16.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib-16"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib-16.com"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib-16.exe"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib-16"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-16.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-16.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib-16"
+      - "C:/Windows/System32/gcc-ranlib-16.com"
+      - "C:/Windows/System32/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/gcc-ranlib-16"
+      - "C:/Windows/gcc-ranlib-16.com"
+      - "C:/Windows/gcc-ranlib-16.exe"
+      - "C:/Windows/gcc-ranlib-16"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.com"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-16.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-16.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-16"
+      - "C:/Program Files/nodejs/gcc-ranlib-16.com"
+      - "C:/Program Files/nodejs/gcc-ranlib-16.exe"
+      - "C:/Program Files/nodejs/gcc-ranlib-16"
+      - "C:/MinGW/bin/gcc-ranlib-16.com"
+      - "C:/MinGW/bin/gcc-ranlib-16.exe"
+      - "C:/MinGW/bin/gcc-ranlib-16"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.com"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.exe"
+      - "C:/Program Files/dotnet/gcc-ranlib-16"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.com"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib-16.com"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib-16.exe"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib-16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib-16"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.com"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.exe"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-16.com"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-16.exe"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib-16"
+      - "C:/MinGW/gcc-ranlib-16.com"
+      - "C:/MinGW/gcc-ranlib-16.exe"
+      - "C:/MinGW/gcc-ranlib-16"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-16.com"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-16.exe"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib-16"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib16.com"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib16.exe"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib16"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib16.com"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib16.exe"
+      - "C:/Program Files/PowerShell/7/gcc-ranlib16"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib16.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib16.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/gcc-ranlib16"
+      - "C:/Windows/System32/gcc-ranlib16.com"
+      - "C:/Windows/System32/gcc-ranlib16.exe"
+      - "C:/Windows/System32/gcc-ranlib16"
+      - "C:/Windows/gcc-ranlib16.com"
+      - "C:/Windows/gcc-ranlib16.exe"
+      - "C:/Windows/gcc-ranlib16"
+      - "C:/Windows/System32/wbem/gcc-ranlib16.com"
+      - "C:/Windows/System32/wbem/gcc-ranlib16.exe"
+      - "C:/Windows/System32/wbem/gcc-ranlib16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib16"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib16"
+      - "C:/Program Files/Git/cmd/gcc-ranlib16.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib16.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib16"
+      - "C:/Program Files/nodejs/gcc-ranlib16.com"
+      - "C:/Program Files/nodejs/gcc-ranlib16.exe"
+      - "C:/Program Files/nodejs/gcc-ranlib16"
+      - "C:/MinGW/bin/gcc-ranlib16.com"
+      - "C:/MinGW/bin/gcc-ranlib16.exe"
+      - "C:/MinGW/bin/gcc-ranlib16"
+      - "C:/Program Files/dotnet/gcc-ranlib16.com"
+      - "C:/Program Files/dotnet/gcc-ranlib16.exe"
+      - "C:/Program Files/dotnet/gcc-ranlib16"
+      - "C:/Program Files/CMake/bin/gcc-ranlib16.com"
+      - "C:/Program Files/CMake/bin/gcc-ranlib16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ranlib16"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib16.com"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib16.exe"
+      - "C:/Program Files/GitHub CLI/gcc-ranlib16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Python/Launcher/gcc-ranlib16"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib16.com"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib16.exe"
+      - "C:/Users/Mcm/AppData/Local/Microsoft/WindowsApps/gcc-ranlib16"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib16.com"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib16.exe"
+      - "C:/Users/Mcm/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib16"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib16.com"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib16.exe"
+      - "C:/Users/Mcm/AppData/Roaming/npm/gcc-ranlib16"
+      - "C:/MinGW/gcc-ranlib16.com"
+      - "C:/MinGW/gcc-ranlib16.exe"
+      - "C:/MinGW/gcc-ranlib16"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib16.com"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib16.exe"
+      - "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/mingw-w64-v11.0.0.tar.bz2/gcc-ranlib16"
+      - "C:/msys64/ucrt64/bin/gcc-ranlib.com"
+    found: "C:/msys64/ucrt64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Program Files\\PowerShell\\7"
@@ -1756,7 +1756,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake:167 (enable_language)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-GNU-C.cmake:2 (__windows_compiler_gnu)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake:48 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RC_COMPILER"
     description: "RC compiler"
@@ -1882,12 +1882,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:120 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-kru79e"
-      binary: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-kru79e"
+      source: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-cw13mh"
+      binary: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-cw13mh"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1896,60 +1896,59 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: 'C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-kru79e'
+        Change Dir: 'C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-cw13mh'
         
-        Run Build Command(s): C:/msys64/ucrt64/bin/ninja.exe -v cmTC_7f998
-        [1/2] C:\\MinGW\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): C:/msys64/ucrt64/bin/ninja.exe -v cmTC_0b53d
+        [1/2] C:\\msys64\\ucrt64\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
-        COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe
-        Target: mingw32
-        Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls
-        Thread model: win32
-        gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
-         c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/cc1.exe -quiet -v -iprefix c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/ C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=i586 -auxbase-strip CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj -version -o C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccaBqwNa.s
-        GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
-        	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
+        COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\gcc.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-16.1.0/configure --prefix=/ucrt64 --with-local-prefix=/ucrt64/local --libexecdir=/ucrt64/lib --enable-bootstrap --enable-checking=release --with-arch=nocona --with-tune=generic --enable-mingw-wildcard --enable-languages=c,c++,ada,fortran,lto,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-tls --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-backtrace=yes --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch --enable-libgomp --disable-libssp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/ucrt64 --with-mpfr=/ucrt64 --with-mpc=/ucrt64 --with-isl=/ucrt64 --with-pkgversion='Rev5, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --with-libstdcxx-zoneinfo=yes --disable-libstdcxx-debug --enable-lto --with-boot-ldflags=-static-libstdc++ --with-stage1-ldflags=-static-libstdc++
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (Rev5, Built by MSYS2 project) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_0b53d.dir/'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/cc1.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_0b53d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccZy7BEM.s
+        GNU C23 (Rev5, Built by MSYS2 project) version 16.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 16.1.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.27-GMP
+        
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include"
-        ignoring duplicate directory "/mingw/lib/gcc/mingw32/6.3.0/../../../../include"
-        ignoring duplicate directory "c:/mingw/lib/gcc/../../include"
-        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include-fixed"
-        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"
-        ignoring duplicate directory "/mingw/include"
+        ignoring nonexistent directory "C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include"
+        ignoring nonexistent directory "D:/M/msys64/ucrt64/include"
+        ignoring nonexistent directory "/ucrt64/include"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed"
+        ignoring nonexistent directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include
-         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../include
-         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include-fixed
-         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../include
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed
         End of search list.
-        GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
-        	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: 384cad586f05ed581a9c068b2f18b408
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
-         c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/as.exe -v -o CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccaBqwNa.s
-        GNU assembler version 2.28 (mingw32) using BFD version (GNU Binutils) 2.28
-        COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
-        LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\MinGW\\bin\\gcc.exe  -v -Wl,-v CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj -o cmTC_7f998.exe -Wl,--out-implib,libcmTC_7f998.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Compiler executable checksum: 8ce1135867793bb4ef554b26be63cf3e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_0b53d.dir/'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccZy7BEM.s
+        GNU assembler version 2.46.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.46.1
+        COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\gcc.exe  -v -Wl,-v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj -o cmTC_0b53d.exe -Wl,--out-implib,libcmTC_0b53d.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
-        COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe
-        COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
-        Target: mingw32
-        Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls
-        Thread model: win32
-        gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
-        COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
-        LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7f998.exe' '-mtune=generic' '-march=i586'
-         c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccixFVqo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_7f998.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. -v CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7f998.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
-        collect2 version 6.3.0
-        c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccixFVqo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_7f998.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. -v CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7f998.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
-        GNU ld (GNU Binutils) 2.28
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7f998.exe' '-mtune=generic' '-march=i586'
+        COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-16.1.0/configure --prefix=/ucrt64 --with-local-prefix=/ucrt64/local --libexecdir=/ucrt64/lib --enable-bootstrap --enable-checking=release --with-arch=nocona --with-tune=generic --enable-mingw-wildcard --enable-languages=c,c++,ada,fortran,lto,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-tls --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-backtrace=yes --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch --enable-libgomp --disable-libssp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/ucrt64 --with-mpfr=/ucrt64 --with-mpc=/ucrt64 --with-isl=/ucrt64 --with-pkgversion='Rev5, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --with-libstdcxx-zoneinfo=yes --disable-libstdcxx-debug --enable-lto --with-boot-ldflags=-static-libstdc++ --with-stage1-ldflags=-static-libstdc++
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (Rev5, Built by MSYS2 project) 
+        COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0b53d.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_0b53d.'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\cc3AdV43.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_0b53d.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0b53d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o
+        collect2 version 16.1.0
+        C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\cc3AdV43.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_0b53d.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0b53d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o
+        GNU ld (GNU Binutils) 2.46.1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0b53d.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_0b53d.'
         
       exitCode: 0
   -
@@ -1957,21 +1956,19 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:252 (message)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/include]
-          add: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../include]
-          add: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/include-fixed]
-          add: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/include]
+          add: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include]
+          add: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../include]
+          add: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed]
         end of search list found
-        collapse include dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/include] ==> [C:/MinGW/lib/gcc/mingw32/6.3.0/include]
-        collapse include dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../include] ==> [C:/MinGW/include]
-        collapse include dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/include-fixed] ==> [C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed]
-        collapse include dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/include] ==> [C:/MinGW/mingw32/include]
-        implicit include dirs: [C:/MinGW/lib/gcc/mingw32/6.3.0/include;C:/MinGW/include;C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed;C:/MinGW/mingw32/include]
+        collapse include dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include] ==> [C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include]
+        collapse include dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../include] ==> [C:/msys64/ucrt64/include]
+        collapse include dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed] ==> [C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed]
+        implicit include dirs: [C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include;C:/msys64/ucrt64/include;C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed]
       
       
   -
@@ -1979,82 +1976,86 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:288 (message)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-kru79e']
+        ignore line: [Change Dir: 'C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CMakeFiles/CMakeScratch/TryCompile-cw13mh']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/msys64/ucrt64/bin/ninja.exe -v cmTC_7f998]
-        ignore line: [[1/2] C:\\MinGW\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): C:/msys64/ucrt64/bin/ninja.exe -v cmTC_0b53d]
+        ignore line: [[1/2] C:\\msys64\\ucrt64\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe]
-        ignore line: [Target: mingw32]
-        ignore line: [Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c c++ objc obj-c++ fortran ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls]
-        ignore line: [Thread model: win32]
-        ignore line: [gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586']
-        ignore line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/cc1.exe -quiet -v -iprefix c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/ C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=i586 -auxbase-strip CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj -version -o C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccaBqwNa.s]
-        ignore line: [GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)]
-        ignore line: [	compiled by GNU C version 6.3.0  GMP version 6.1.2  MPFR version 3.1.5  MPC version 1.0.3  isl version 0.15]
+        ignore line: [COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\gcc.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-16.1.0/configure --prefix=/ucrt64 --with-local-prefix=/ucrt64/local --libexecdir=/ucrt64/lib --enable-bootstrap --enable-checking=release --with-arch=nocona --with-tune=generic --enable-mingw-wildcard --enable-languages=c,c++,ada,fortran,lto,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-tls --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-backtrace=yes --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch --enable-libgomp --disable-libssp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/ucrt64 --with-mpfr=/ucrt64 --with-mpc=/ucrt64 --with-isl=/ucrt64 --with-pkgversion='Rev5, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --with-libstdcxx-zoneinfo=yes --disable-libstdcxx-debug --enable-lto --with-boot-ldflags=-static-libstdc++ --with-stage1-ldflags=-static-libstdc++]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (Rev5  Built by MSYS2 project) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_0b53d.dir/']
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/cc1.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_0b53d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccZy7BEM.s]
+        ignore line: [GNU C23 (Rev5  Built by MSYS2 project) version 16.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 16.1.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.27-GMP]
+        ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include"]
-        ignore line: [ignoring duplicate directory "/mingw/lib/gcc/mingw32/6.3.0/../../../../include"]
-        ignore line: [ignoring duplicate directory "c:/mingw/lib/gcc/../../include"]
-        ignore line: [ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include-fixed"]
-        ignore line: [ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"]
-        ignore line: [ignoring duplicate directory "/mingw/include"]
+        ignore line: [ignoring nonexistent directory "C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include"]
+        ignore line: [ignoring nonexistent directory "D:/M/msys64/ucrt64/include"]
+        ignore line: [ignoring nonexistent directory "/ucrt64/include"]
+        ignore line: [ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include]
-        ignore line: [ c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../include]
-        ignore line: [ c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include-fixed]
-        ignore line: [ c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include]
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include]
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../include]
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed]
         ignore line: [End of search list.]
-        ignore line: [GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)]
-        ignore line: [	compiled by GNU C version 6.3.0  GMP version 6.1.2  MPFR version 3.1.5  MPC version 1.0.3  isl version 0.15]
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: 384cad586f05ed581a9c068b2f18b408]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586']
-        ignore line: [ c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/as.exe -v -o CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccaBqwNa.s]
-        ignore line: [GNU assembler version 2.28 (mingw32) using BFD version (GNU Binutils) 2.28]
-        ignore line: [COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/]
-        ignore line: [c:/mingw/bin/../libexec/gcc/]
-        ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/]
-        ignore line: [LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/]
-        ignore line: [c:/mingw/bin/../lib/gcc/]
-        ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/]
-        ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586']
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\MinGW\\bin\\gcc.exe  -v -Wl -v CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj -o cmTC_7f998.exe -Wl --out-implib libcmTC_7f998.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Compiler executable checksum: 8ce1135867793bb4ef554b26be63cf3e]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_0b53d.dir/']
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccZy7BEM.s]
+        ignore line: [GNU assembler version 2.46.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.46.1]
+        ignore line: [COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\gcc.exe  -v -Wl -v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj -o cmTC_0b53d.exe -Wl --out-implib libcmTC_0b53d.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe]
-        ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe]
-        ignore line: [Target: mingw32]
-        ignore line: [Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c c++ objc obj-c++ fortran ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls]
-        ignore line: [Thread model: win32]
-        ignore line: [gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) ]
-        ignore line: [COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/]
-        ignore line: [c:/mingw/bin/../libexec/gcc/]
-        ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/]
-        ignore line: [LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/]
-        ignore line: [c:/mingw/bin/../lib/gcc/]
-        ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/]
-        ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7f998.exe' '-mtune=generic' '-march=i586']
-        link line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccixFVqo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_7f998.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. -v CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7f998.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
-          arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe] ==> ignore
+        ignore line: [COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-16.1.0/configure --prefix=/ucrt64 --with-local-prefix=/ucrt64/local --libexecdir=/ucrt64/lib --enable-bootstrap --enable-checking=release --with-arch=nocona --with-tune=generic --enable-mingw-wildcard --enable-languages=c,c++,ada,fortran,lto,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-tls --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-backtrace=yes --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch --enable-libgomp --disable-libssp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/ucrt64 --with-mpfr=/ucrt64 --with-mpc=/ucrt64 --with-isl=/ucrt64 --with-pkgversion='Rev5, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --with-libstdcxx-zoneinfo=yes --disable-libstdcxx-debug --enable-lto --with-boot-ldflags=-static-libstdc++ --with-stage1-ldflags=-static-libstdc++]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (Rev5  Built by MSYS2 project) ]
+        ignore line: [COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0b53d.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_0b53d.']
+        link line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\cc3AdV43.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_0b53d.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0b53d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+          arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
-          arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll] ==> ignore
-          arg [-plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccixFVqo.res] ==> ignore
+          arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll] ==> ignore
+          arg [-plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\cc3AdV43.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
           arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
           arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
           arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
           arg [-plugin-opt=-pass-through=-luser32] ==> ignore
@@ -2062,22 +2063,26 @@ events:
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
           arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_7f998.exe] ==> ignore
-          arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o] ==> obj [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o]
-          arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o] ==> obj [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o]
-          arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0]
-          arg [-Lc:/mingw/bin/../lib/gcc] ==> dir [c:/mingw/bin/../lib/gcc]
-          arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib]
-          arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..]
+          arg [cmTC_0b53d.exe] ==> ignore
+          arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o]
+          arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o]
+          arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0]
+          arg [-LC:/msys64/ucrt64/bin/../lib/gcc] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc]
+          arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib]
+          arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../..] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_7f998.dll.a] ==> ignore
+          arg [libcmTC_0b53d.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -2085,9 +2090,10 @@ events:
           arg [-lmingw32] ==> lib [mingw32]
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
           arg [-lmingwex] ==> lib [mingwex]
           arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
           arg [-ladvapi32] ==> lib [advapi32]
           arg [-lshell32] ==> lib [shell32]
           arg [-luser32] ==> lib [user32]
@@ -2095,28 +2101,33 @@ events:
           arg [-lmingw32] ==> lib [mingw32]
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
           arg [-lmingwex] ==> lib [mingwex]
           arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o] ==> obj [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
-        ignore line: [collect2 version 6.3.0]
-        link line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccixFVqo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_7f998.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. -v CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7f998.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o] ==> linker [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe]
-        ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\ccixFVqo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_7f998.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. -v CMakeFiles/cmTC_7f998.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7f998.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
-        linker tool for 'C': c:/mingw/mingw32/bin/ld.exe 
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o]
+          arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+        ignore line: [collect2 version 16.1.0]
+        link line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\cc3AdV43.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_0b53d.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0b53d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o] ==> linker [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe]
+        link line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\cc3AdV43.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_0b53d.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0b53d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o] ==> linker architecture flags [-m;i386pep]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Mcm\\AppData\\Local\\Temp\\cc3AdV43.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_0b53d.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v CMakeFiles/cmTC_0b53d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0b53d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+        linker tool for 'C': C:/msys64/ucrt64/x86_64-w64-mingw32/bin/ld.exe -m;i386pep
         remove lib [gcc_eh]
         remove lib [msvcrt]
         remove lib [gcc_eh]
         remove lib [msvcrt]
-        collapse obj [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o] ==> [C:/MinGW/lib/crt2.o]
-        collapse obj [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o] ==> [C:/MinGW/lib/gcc/mingw32/6.3.0/crtbegin.o]
-        collapse obj [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o] ==> [C:/MinGW/lib/gcc/mingw32/6.3.0/crtend.o]
-        collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> [C:/MinGW/lib/gcc/mingw32/6.3.0]
-        collapse library dir [c:/mingw/bin/../lib/gcc] ==> [C:/MinGW/lib/gcc]
-        collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> [C:/MinGW/mingw32/lib]
-        collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> [C:/MinGW/lib]
-        implicit libs: [mingw32;gcc;moldname;mingwex;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex]
-        implicit objs: [C:/MinGW/lib/crt2.o;C:/MinGW/lib/gcc/mingw32/6.3.0/crtbegin.o;C:/MinGW/lib/gcc/mingw32/6.3.0/crtend.o]
-        implicit dirs: [C:/MinGW/lib/gcc/mingw32/6.3.0;C:/MinGW/lib/gcc;C:/MinGW/mingw32/lib;C:/MinGW/lib]
+        collapse obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/crt2.o] ==> [C:/msys64/ucrt64/lib/crt2.o]
+        collapse obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o] ==> [C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o]
+        collapse obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/default-manifest.o] ==> [C:/msys64/ucrt64/lib/default-manifest.o]
+        collapse obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o] ==> [C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+        collapse library dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0] ==> [C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0]
+        collapse library dir [C:/msys64/ucrt64/bin/../lib/gcc] ==> [C:/msys64/ucrt64/lib/gcc]
+        collapse library dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/msys64/ucrt64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib] ==> [C:/msys64/ucrt64/lib]
+        collapse library dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/msys64/ucrt64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../..] ==> [C:/msys64/ucrt64/lib]
+        implicit libs: [mingw32;gcc;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;mingwex;kernel32]
+        implicit objs: [C:/msys64/ucrt64/lib/crt2.o;C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o;C:/msys64/ucrt64/lib/default-manifest.o;C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+        implicit dirs: [C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0;C:/msys64/ucrt64/lib/gcc;C:/msys64/ucrt64/x86_64-w64-mingw32/lib;C:/msys64/ucrt64/lib]
         implicit fwks: []
       
       
@@ -2126,8 +2137,8 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:334 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
-      Running the C compiler's linker: "c:/mingw/mingw32/bin/ld.exe" "-v"
-      GNU ld (GNU Binutils) 2.28
+      Running the C compiler's linker: "C:/msys64/ucrt64/x86_64-w64-mingw32/bin/ld.exe" "-v"
+      GNU ld (GNU Binutils) 2.46.1
 ...

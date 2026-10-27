@@ -1,0 +1,158 @@
+Start testing: Oct 27 23:59 Pakistan Standard Time
+----------------------------------------------------------
+1/1 Testing: database_tests
+1/1 Test: database_tests
+Command: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_database.exe"
+Directory: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
+"database_tests" start time: Oct 27 23:59 Pakistan Standard Time
+Output:
+----------------------------------------------------------
+=== F6 Database Automated Tests ===
+
+[PASS] db_create(&db, "name", "Fahima")
+[PASS] db.count == 1
+[PASS] db_read(&db, "name", output, sizeof(output))
+[PASS] strcmp(output, "Fahima") == 0
+[PASS] db_create(&db, "city", "Quetta")
+[PASS] !db_create(&db, "city", "Karachi")
+[PASS] !db_read(&db, "missing", output, sizeof(output))
+[PASS] !db_update(&db, "missing", "value")
+[PASS] !db_delete(&db, "missing")
+[PASS] db.count == 1
+[PASS] db_create(&db, "language", "C")
+[PASS] db_update(&db, "language", "C11")
+[PASS] db_read(&db, "language", output, sizeof(output))
+[PASS] strcmp(output, "C11") == 0
+[PASS] db_delete(&db, "language")
+[PASS] db.count == 0
+[PASS] !db_read(&db, "language", output, sizeof(output))
+[PASS] !db_create(&db, "", "value")
+[PASS] !db_create(&db, "bad\tkey", "value")
+[PASS] !db_create(&db, "key", "bad\nvalue")
+[PASS] !db_create(&db, NULL, "value")
+[PASS] !db_create(&db, "key", NULL)
+[PASS] db.count == 0
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db_create(&db, key, "value")
+[PASS] db.count == MAX_RECORDS
+[PASS] !db_create(&db, "extra", "value")
+[PASS] db_create(&original, "name", "Fahima")
+[PASS] db_create(&original, "city", "Quetta")
+[PASS] db_save(&original, filename)
+[PASS] db_load(&loaded, filename)
+[PASS] loaded.count == 2
+[PASS] db_read(&loaded, "name", output, sizeof(output))
+[PASS] strcmp(output, "Fahima") == 0
+[PASS] db_read(&loaded, "city", output, sizeof(output))
+[PASS] strcmp(output, "Quetta") == 0
+
+=== Test Results ===
+Passed: 134
+Failed: 0
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"database_tests" end time: Oct 27 23:59 Pakistan Standard Time
+"database_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 27 23:59 Pakistan Standard Time
