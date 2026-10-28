@@ -121,13 +121,14 @@ static void test_save_and_load(void)
 int main(void)
 {
     printf("=== F6 Database Automated Tests ===\n\n");
-
-    test_create_and_read();
-    test_duplicate_and_missing_keys();
-    test_update_and_delete();
-    test_invalid_inputs();
-    test_capacity();
-    test_save_and_load();
+test_create_and_read();
+test_duplicate_and_missing_keys();
+test_update_and_delete();
+test_invalid_inputs();
+test_capacity();
+test_save_and_load();
+test_corrupted_file();
+    
 
     printf("\n=== Test Results ===\n");
     printf("Passed: %d\n", tests_passed);
