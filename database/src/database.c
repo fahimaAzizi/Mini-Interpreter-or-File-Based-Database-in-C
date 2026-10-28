@@ -130,14 +130,26 @@ int db_delete(Database *db, const char *key)
 
     return 1;
 }
-
 int db_save(const Database *db, const char *filename)
 {
-    if (db == NULL || filename == NULL) {
+    if (db == NULL || filename == NULL || filename[0] == '\0') {
         return 0;
     }
 
-    FILE *file = fopen(filename, "w");
+    char temp_filename[512];
+
+    int length = snprintf(
+        temp_filename,
+        sizeof(temp_filename),
+        "%s.tmp",
+        filename
+    );
+
+    if (length < 0 || (size_t)length >= sizeof(temp_filename)) {
+        return 0;
+    }
+
+    FILE *file = fopen(temp_filename, "w");
 
     if (file == NULL) {
         return 0;
@@ -161,9 +173,18 @@ int db_save(const Database *db, const char *filename)
         success = 0;
     }
 
-    return success;
-}
+    if (!success) {
+        remove(temp_filename);
+        return 0;
+    }
 
+    if (rename(temp_filename, filename) != 0) {
+        remove(temp_filename);
+        return 0;
+    }
+
+    return 1;
+}
 int db_load(Database *db, const char *filename)
 {
     if (db == NULL || filename == NULL) {
