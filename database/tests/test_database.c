@@ -134,4 +134,25 @@ int main(void)
     printf("Failed: %d\n", tests_failed);
 
     return tests_failed == 0 ? 0 : 1;
+}static void test_corrupted_file(void)
+{
+    Database db;
+    char output[MAX_VALUE_LENGTH];
+
+    db_init(&db);
+
+    CHECK(db_create(&db, "original", "safe-data"));
+
+    CHECK(!db_load(&db, "corrupted-test.dat"));
+
+    CHECK(db.count == 1);
+
+    CHECK(db_read(
+        &db,
+        "original",
+        output,
+        sizeof(output)
+    ));
+
+    CHECK(strcmp(output, "safe-data") == 0);
 }
