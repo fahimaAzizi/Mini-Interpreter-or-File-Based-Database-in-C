@@ -1,3 +1,4 @@
+
 #include "database.h"
 
 #include <stdio.h>
@@ -39,18 +40,21 @@ void db_init(Database *db)
     }
 }
 
-int db_create(Database *db, const char *key, const char *value)
+DBStatus db_create(Database *db, const char *key, const char *value)
 {
     if (db == NULL ||
         !valid_text(key, MAX_KEY_LENGTH) ||
         key[0] == '\0' ||
         !valid_text(value, MAX_VALUE_LENGTH)) {
-        return 0;
+        return DB_ERROR_INVALID_INPUT;
     }
 
-    if (db->count >= MAX_RECORDS ||
-        find_record(db, key) != -1) {
-        return 0;
+    if (find_record(db, key) != -1) {
+        return DB_ERROR_DUPLICATE_KEY;
+    }
+
+    if (db->count >= MAX_RECORDS) {
+        return DB_ERROR_FULL;
     }
 
     Record *record = &db->records[db->count];
@@ -60,10 +64,10 @@ int db_create(Database *db, const char *key, const char *value)
 
     db->count++;
 
-    return 1;
+    return DB_SUCCESS;
 }
 
-int db_read(
+DBStatus db_read(
     const Database *db,
     const char *key,
     char *value_out,
@@ -72,54 +76,54 @@ int db_read(
 {
     if (db == NULL || key == NULL ||
         value_out == NULL || output_size == 0) {
-        return 0;
+        return DB_ERROR_INVALID_INPUT;
     }
 
     int index = find_record(db, key);
 
     if (index == -1) {
-        return 0;
+        return DB_ERROR_NOT_FOUND;
     }
 
     size_t length = strlen(db->records[index].value);
 
     if (length >= output_size) {
-        return 0;
+        return DB_ERROR_BUFFER_TOO_SMALL;
     }
 
     strcpy(value_out, db->records[index].value);
 
-    return 1;
+    return DB_SUCCESS;
 }
 
-int db_update(Database *db, const char *key, const char *new_value)
+DBStatus db_update(Database *db, const char *key, const char *new_value)
 {
     if (db == NULL || key == NULL ||
         !valid_text(new_value, MAX_VALUE_LENGTH)) {
-        return 0;
+        return DB_ERROR_INVALID_INPUT;
     }
 
     int index = find_record(db, key);
 
     if (index == -1) {
-        return 0;
+        return DB_ERROR_NOT_FOUND;
     }
 
     strcpy(db->records[index].value, new_value);
 
-    return 1;
+    return DB_SUCCESS;
 }
 
-int db_delete(Database *db, const char *key)
+DBStatus db_delete(Database *db, const char *key)
 {
     if (db == NULL || key == NULL) {
-        return 0;
+        return DB_ERROR_INVALID_INPUT;
     }
 
     int index = find_record(db, key);
 
     if (index == -1) {
-        return 0;
+        return DB_ERROR_NOT_FOUND;
     }
 
     for (size_t i = (size_t)index; i + 1 < db->count; i++) {
@@ -128,12 +132,13 @@ int db_delete(Database *db, const char *key)
 
     db->count--;
 
-    return 1;
+    return DB_SUCCESS;
 }
-int db_save(const Database *db, const char *filename)
+
+DBStatus db_save(const Database *db, const char *filename)
 {
     if (db == NULL || filename == NULL || filename[0] == '\0') {
-        return 0;
+        return DB_ERROR_INVALID_INPUT;
     }
 
     char temp_filename[512];
@@ -146,13 +151,13 @@ int db_save(const Database *db, const char *filename)
     );
 
     if (length < 0 || (size_t)length >= sizeof(temp_filename)) {
-        return 0;
+        return DB_ERROR_INVALID_INPUT;
     }
 
     FILE *file = fopen(temp_filename, "w");
 
     if (file == NULL) {
-        return 0;
+        return DB_ERROR_FILE_OPEN;
     }
 
     int success = 1;
@@ -175,26 +180,27 @@ int db_save(const Database *db, const char *filename)
 
     if (!success) {
         remove(temp_filename);
-        return 0;
+        return DB_ERROR_FILE_WRITE;
     }
 
     if (rename(temp_filename, filename) != 0) {
         remove(temp_filename);
-        return 0;
+        return DB_ERROR_FILE_WRITE;
     }
 
-    return 1;
+    return DB_SUCCESS;
 }
-int db_load(Database *db, const char *filename)
+
+DBStatus db_load(Database *db, const char *filename)
 {
-    if (db == NULL || filename == NULL) {
-        return 0;
+    if (db == NULL || filename == NULL || filename[0] == '\0') {
+        return DB_ERROR_INVALID_INPUT;
     }
 
     FILE *file = fopen(filename, "r");
 
     if (file == NULL) {
-        return 0;
+        return DB_ERROR_FILE_OPEN;
     }
 
     Database loaded;
@@ -210,11 +216,11 @@ int db_load(Database *db, const char *filename)
             int ch;
 
             while ((ch = fgetc(file)) != '\n' && ch != EOF) {
-                /* Discard the rest of an oversized line. */
+                /* Discard the rest of the oversized line. */
             }
 
             fclose(file);
-            return 0;
+            return DB_ERROR_CORRUPTED_FILE;
         }
 
         line[strcspn(line, "\r\n")] = '\0';
@@ -223,30 +229,71 @@ int db_load(Database *db, const char *filename)
 
         if (separator == NULL) {
             fclose(file);
-            return 0;
+            return DB_ERROR_CORRUPTED_FILE;
         }
 
         *separator = '\0';
 
-        const char *key = line;
-        const char *value = separator + 1;
+        DBStatus status = db_create(
+            &loaded,
+            line,
+            separator + 1
+        );
 
-        if (!db_create(&loaded, key, value)) {
+        if (status != DB_SUCCESS) {
             fclose(file);
-            return 0;
+            return DB_ERROR_CORRUPTED_FILE;
         }
     }
 
     if (ferror(file)) {
         fclose(file);
-        return 0;
+        return DB_ERROR_FILE_READ;
     }
 
     if (fclose(file) != 0) {
-        return 0;
+        return DB_ERROR_FILE_READ;
     }
 
     *db = loaded;
 
-    return 1;
+    return DB_SUCCESS;
+}
+
+const char *db_status_message(DBStatus status)
+{
+    switch (status) {
+        case DB_SUCCESS:
+            return "Operation completed successfully.";
+
+        case DB_ERROR_INVALID_INPUT:
+            return "Invalid input.";
+
+        case DB_ERROR_DUPLICATE_KEY:
+            return "A record with this key already exists.";
+
+        case DB_ERROR_NOT_FOUND:
+            return "Record not found.";
+
+        case DB_ERROR_FULL:
+            return "Database is full.";
+
+        case DB_ERROR_FILE_OPEN:
+            return "Could not open the database file.";
+
+        case DB_ERROR_FILE_WRITE:
+            return "Could not write or replace the database file.";
+
+        case DB_ERROR_FILE_READ:
+            return "Could not read the database file.";
+
+        case DB_ERROR_CORRUPTED_FILE:
+            return "Database file is corrupted.";
+
+        case DB_ERROR_BUFFER_TOO_SMALL:
+            return "Output buffer is too small.";
+
+        default:
+            return "Unknown database error.";
+    }
 }
