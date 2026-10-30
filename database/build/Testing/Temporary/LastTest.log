@@ -1,158 +1,27 @@
-Start testing: Oct 29 01:13 Pakistan Standard Time
+Start testing: Oct 30 20:56 Pakistan Standard Time
 ----------------------------------------------------------
 1/1 Testing: database_tests
 1/1 Test: database_tests
 Command: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_database.exe"
 Directory: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
-"database_tests" start time: Oct 29 01:13 Pakistan Standard Time
+"database_tests" start time: Oct 30 20:56 Pakistan Standard Time
 Output:
 ----------------------------------------------------------
-=== F6 Database Automated Tests ===
+Running database tests...
 
-[PASS] db_create(&db, "name", "Fahima")
-[PASS] db.count == 1
-[PASS] db_read(&db, "name", output, sizeof(output))
-[PASS] strcmp(output, "Fahima") == 0
-[PASS] db_create(&db, "city", "Quetta")
-[PASS] !db_create(&db, "city", "Karachi")
-[PASS] !db_read(&db, "missing", output, sizeof(output))
-[PASS] !db_update(&db, "missing", "value")
-[PASS] !db_delete(&db, "missing")
-[PASS] db.count == 1
-[PASS] db_create(&db, "language", "C")
-[PASS] db_update(&db, "language", "C11")
-[PASS] db_read(&db, "language", output, sizeof(output))
-[PASS] strcmp(output, "C11") == 0
-[PASS] db_delete(&db, "language")
-[PASS] db.count == 0
-[PASS] !db_read(&db, "language", output, sizeof(output))
-[PASS] !db_create(&db, "", "value")
-[PASS] !db_create(&db, "bad\tkey", "value")
-[PASS] !db_create(&db, "key", "bad\nvalue")
-[PASS] !db_create(&db, NULL, "value")
-[PASS] !db_create(&db, "key", NULL)
-[PASS] db.count == 0
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db_create(&db, key, "value")
-[PASS] db.count == MAX_RECORDS
-[PASS] !db_create(&db, "extra", "value")
-[PASS] db_create(&original, "name", "Fahima")
-[PASS] db_create(&original, "city", "Quetta")
-[PASS] db_save(&original, filename)
-[PASS] db_load(&loaded, filename)
-[PASS] loaded.count == 2
-[PASS] db_read(&loaded, "name", output, sizeof(output))
-[PASS] strcmp(output, "Fahima") == 0
-[PASS] db_read(&loaded, "city", output, sizeof(output))
-[PASS] strcmp(output, "Quetta") == 0
+FAILED: db_create(&db, "key", "") == DB_ERROR_INVALID_INPUT (line 84)
+FAILED: db.count == 0 (line 92)
 
-=== Test Results ===
-Passed: 134
-Failed: 0
+Tests run: 143
+Tests failed: 2
+
+Some tests failed.
 <end of output>
-Test time =   0.08 sec
+Test time =   0.17 sec
 ----------------------------------------------------------
-Test Passed.
-"database_tests" end time: Oct 29 01:13 Pakistan Standard Time
+Test Failed.
+"database_tests" end time: Oct 30 20:56 Pakistan Standard Time
 "database_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 29 01:13 Pakistan Standard Time
+End testing: Oct 30 20:56 Pakistan Standard Time

@@ -1,2 +1,3 @@
-database_tests 2 0.0377841
+database_tests 2 0
 ---
+database_tests

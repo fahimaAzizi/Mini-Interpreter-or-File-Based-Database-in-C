@@ -22,16 +22,24 @@ static int valid_text(const char *text, size_t max_length)
     return 1;
 }
 
-static int find_record(const Database *db, const char *key)
+
+static int valid_text(const char *text, size_t max_length)
 {
-    for (size_t i = 0; i < db->count; i++) {
-        if (strcmp(db->records[i].key, key) == 0) {
-            return (int)i;
+    if (text == NULL ||
+        text[0] == '\0' ||
+        strlen(text) >= max_length) {
+        return 0;
+    }
+
+    for (const char *p = text; *p != '\0'; p++) {
+        if (*p == '\t' || *p == '\n' || *p == '\r') {
+            return 0;
         }
     }
 
-    return -1;
+    return 1;
 }
+
 
 void db_init(Database *db)
 {
