@@ -1,3 +1,4 @@
+
 #include "database.h"
 
 #include <stdio.h>
@@ -32,16 +33,32 @@ static int read_input(const char *prompt, char *buffer, size_t size)
     }
 
     if (length > 0 && buffer[length - 1] == '\r') {
-        buffer[length - 1] = '\0';
+        buffer[--length] = '\0';
+    }
+
+    if (buffer[0] == '\0') {
+        printf("Input cannot be empty. Please try again.\n");
+        return 0;
     }
 
     return 1;
 }
 
+static void report_status(DBStatus status)
+{
+    if (status != DB_SUCCESS) {
+        printf("Error: %s\n", db_status_message(status));
+    } else {
+        printf("%s\n", db_status_message(status));
+    }
+}
+
 static void save_after_change(const Database *db)
 {
-    if (!db_save(db, DATABASE_FILE)) {
-        printf("Warning: Could not save the database file.\n");
+    DBStatus status = db_save(db, DATABASE_FILE);
+
+    if (status != DB_SUCCESS) {
+        report_status(status);
     }
 }
 
@@ -69,10 +86,15 @@ int main(void)
     Database db;
     db_init(&db);
 
-    if (db_load(&db, DATABASE_FILE)) {
+    DBStatus load_status = db_load(&db, DATABASE_FILE);
+
+    if (load_status == DB_SUCCESS) {
         printf("Database loaded successfully.\n");
+    } else if (load_status == DB_ERROR_FILE_OPEN) {
+        printf("No existing database found. Starting a new database.\n");
     } else {
-        printf("Starting with an empty database.\n");
+        report_status(load_status);
+        printf("Existing database was not loaded.\n");
     }
 
     char option[INPUT_LENGTH];
@@ -99,21 +121,30 @@ int main(void)
                 continue;
             }
 
-            if (db_create(&db, key, value)) {
-                printf("Record created successfully.\n");
+            DBStatus status = db_create(&db, key, value);
+
+            if (status == DB_SUCCESS) {
+                report_status(status);
                 save_after_change(&db);
             } else {
-                printf("Create failed. Check the key, value, or capacity.\n");
+                report_status(status);
             }
         } else if (strcmp(option, "2") == 0) {
             if (!read_input("Enter key: ", key, sizeof(key))) {
                 continue;
             }
 
-            if (db_read(&db, key, value, sizeof(value))) {
+            DBStatus status = db_read(
+                &db,
+                key,
+                value,
+                sizeof(value)
+            );
+
+            if (status == DB_SUCCESS) {
                 printf("Value: %s\n", value);
             } else {
-                printf("Record not found.\n");
+                report_status(status);
             }
         } else if (strcmp(option, "3") == 0) {
             if (!read_input("Enter key: ", key, sizeof(key)) ||
@@ -121,31 +152,31 @@ int main(void)
                 continue;
             }
 
-            if (db_update(&db, key, value)) {
-                printf("Record updated successfully.\n");
+            DBStatus status = db_update(&db, key, value);
+
+            if (status == DB_SUCCESS) {
+                report_status(status);
                 save_after_change(&db);
             } else {
-                printf("Update failed. Record not found or value invalid.\n");
+                report_status(status);
             }
         } else if (strcmp(option, "4") == 0) {
             if (!read_input("Enter key: ", key, sizeof(key))) {
                 continue;
             }
 
-            if (db_delete(&db, key)) {
-                printf("Record deleted successfully.\n");
+            DBStatus status = db_delete(&db, key);
+
+            if (status == DB_SUCCESS) {
+                report_status(status);
                 save_after_change(&db);
             } else {
-                printf("Record not found.\n");
+                report_status(status);
             }
         } else if (strcmp(option, "5") == 0) {
             list_records(&db);
         } else if (strcmp(option, "6") == 0) {
-            if (db_save(&db, DATABASE_FILE)) {
-                printf("Database saved successfully.\n");
-            } else {
-                printf("Could not save the database.\n");
-            }
+            report_status(db_save(&db, DATABASE_FILE));
         } else if (strcmp(option, "7") == 0) {
             printf("Goodbye!\n");
             break;
