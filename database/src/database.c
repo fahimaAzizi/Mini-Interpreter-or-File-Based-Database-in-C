@@ -7,22 +7,7 @@
 #define MAX_RECORD_LINE_LENGTH \
     (MAX_KEY_LENGTH + MAX_VALUE_LENGTH + 2)
 
-static int valid_text(const char *text, size_t max_length)
-{
-    if (text == NULL || strlen(text) >= max_length) {
-        return 0;
-    }
-
-    for (const char *p = text; *p != '\0'; p++) {
-        if (*p == '\t' || *p == '\n' || *p == '\r') {
-            return 0;
-        }
-    }
-
-    return 1;
-}
-
-
+/* Validate text fields. Empty strings are not allowed. */
 static int valid_text(const char *text, size_t max_length)
 {
     if (text == NULL ||
@@ -40,6 +25,17 @@ static int valid_text(const char *text, size_t max_length)
     return 1;
 }
 
+/* Find a record by key. Returns its index or -1. */
+static int find_record(const Database *db, const char *key)
+{
+    for (size_t i = 0; i < db->count; i++) {
+        if (strcmp(db->records[i].key, key) == 0) {
+            return (int)i;
+        }
+    }
+
+    return -1;
+}
 
 void db_init(Database *db)
 {
@@ -52,7 +48,6 @@ DBStatus db_create(Database *db, const char *key, const char *value)
 {
     if (db == NULL ||
         !valid_text(key, MAX_KEY_LENGTH) ||
-        key[0] == '\0' ||
         !valid_text(value, MAX_VALUE_LENGTH)) {
         return DB_ERROR_INVALID_INPUT;
     }
@@ -219,8 +214,10 @@ DBStatus db_load(Database *db, const char *filename)
     while (fgets(line, sizeof(line), file) != NULL) {
         size_t length = strlen(line);
 
-        if (length > 0 && line[length - 1] != '\n' &&
+        if (length > 0 &&
+            line[length - 1] != '\n' &&
             !feof(file)) {
+
             int ch;
 
             while ((ch = fgetc(file)) != '\n' && ch != EOF) {
