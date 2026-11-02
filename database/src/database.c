@@ -1,6 +1,8 @@
 
 #include "database.h"
-
+#ifdef _WIN32
+#include <windows.h>
+#endif
 #include <stdio.h>
 #include <string.h>
 
@@ -138,6 +140,7 @@ DBStatus db_delete(Database *db, const char *key)
     return DB_SUCCESS;
 }
 
+
 DBStatus db_save(const Database *db, const char *filename)
 {
     if (db == NULL || filename == NULL || filename[0] == '\0') {
@@ -186,13 +189,25 @@ DBStatus db_save(const Database *db, const char *filename)
         return DB_ERROR_FILE_WRITE;
     }
 
+#ifdef _WIN32
+    if (!MoveFileExA(
+            temp_filename,
+            filename,
+            MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH
+        )) {
+        remove(temp_filename);
+        return DB_ERROR_FILE_WRITE;
+    }
+#else
     if (rename(temp_filename, filename) != 0) {
         remove(temp_filename);
         return DB_ERROR_FILE_WRITE;
     }
+#endif
 
     return DB_SUCCESS;
 }
+
 
 DBStatus db_load(Database *db, const char *filename)
 {
