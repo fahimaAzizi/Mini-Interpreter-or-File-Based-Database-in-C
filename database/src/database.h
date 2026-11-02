@@ -6,6 +6,8 @@
 #define MAX_RECORDS 100
 #define MAX_KEY_LENGTH 50
 #define MAX_VALUE_LENGTH 100
+#define INDEX_SIZE 257
+#define INDEX_EMPTY ((size_t)-1)
 
 typedef enum {
     DB_SUCCESS = 0,
@@ -27,6 +29,10 @@ typedef struct {
 
 typedef struct {
     Record records[MAX_RECORDS];
+
+    /* Hash table: each occupied slot stores a record index. */
+    size_t index[INDEX_SIZE];
+
     size_t count;
 } Database;
 

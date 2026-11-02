@@ -1,15 +1,16 @@
-
 #include "database.h"
+
 #ifdef _WIN32
 #include <windows.h>
 #endif
+
 #include <stdio.h>
 #include <string.h>
 
 #define MAX_RECORD_LINE_LENGTH \
     (MAX_KEY_LENGTH + MAX_VALUE_LENGTH + 2)
 
-/* Validate text fields. Empty strings are not allowed. */
+/* Validate database text fields. */
 static int valid_text(const char *text, size_t max_length)
 {
     if (text == NULL ||
@@ -27,22 +28,84 @@ static int valid_text(const char *text, size_t max_length)
     return 1;
 }
 
-/* Find a record by key. Returns its index or -1. */
+/* FNV-1a hash function. */
+static size_t hash_key(const char *key)
+{
+    size_t hash = (size_t)2166136261u;
+
+    while (*key != '\0') {
+        hash ^= (unsigned char)*key++;
+        hash *= (size_t)16777619u;
+    }
+
+    return hash % INDEX_SIZE;
+}
+
+/* Find a record using the hash table. */
 static int find_record(const Database *db, const char *key)
 {
-    for (size_t i = 0; i < db->count; i++) {
-        if (strcmp(db->records[i].key, key) == 0) {
-            return (int)i;
+    size_t position = hash_key(key);
+
+    for (size_t i = 0; i < INDEX_SIZE; i++) {
+        size_t slot = (position + i) % INDEX_SIZE;
+        size_t record_index = db->index[slot];
+
+        if (record_index == INDEX_EMPTY) {
+            return -1;
+        }
+
+        if (record_index < db->count &&
+            strcmp(db->records[record_index].key, key) == 0) {
+            return (int)record_index;
         }
     }
 
     return -1;
 }
 
+/* Insert a record index into the hash table. */
+static int index_insert(Database *db, size_t record_index)
+{
+    size_t position = hash_key(db->records[record_index].key);
+
+    for (size_t i = 0; i < INDEX_SIZE; i++) {
+        size_t slot = (position + i) % INDEX_SIZE;
+
+        if (db->index[slot] == INDEX_EMPTY) {
+            db->index[slot] = record_index;
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+/* Rebuild the complete index. */
+static int rebuild_index(Database *db)
+{
+    for (size_t i = 0; i < INDEX_SIZE; i++) {
+        db->index[i] = INDEX_EMPTY;
+    }
+
+    for (size_t i = 0; i < db->count; i++) {
+        if (!index_insert(db, i)) {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
 void db_init(Database *db)
 {
-    if (db != NULL) {
-        db->count = 0;
+    if (db == NULL) {
+        return;
+    }
+
+    db->count = 0;
+
+    for (size_t i = 0; i < INDEX_SIZE; i++) {
+        db->index[i] = INDEX_EMPTY;
     }
 }
 
@@ -62,10 +125,14 @@ DBStatus db_create(Database *db, const char *key, const char *value)
         return DB_ERROR_FULL;
     }
 
-    Record *record = &db->records[db->count];
+    size_t new_index = db->count;
 
-    strcpy(record->key, key);
-    strcpy(record->value, value);
+    strcpy(db->records[new_index].key, key);
+    strcpy(db->records[new_index].value, value);
+
+    if (!index_insert(db, new_index)) {
+        return DB_ERROR_FULL;
+    }
 
     db->count++;
 
@@ -137,9 +204,12 @@ DBStatus db_delete(Database *db, const char *key)
 
     db->count--;
 
+    if (!rebuild_index(db)) {
+        return DB_ERROR_FULL;
+    }
+
     return DB_SUCCESS;
 }
-
 
 DBStatus db_save(const Database *db, const char *filename)
 {
@@ -208,7 +278,6 @@ DBStatus db_save(const Database *db, const char *filename)
     return DB_SUCCESS;
 }
 
-
 DBStatus db_load(Database *db, const char *filename)
 {
     if (db == NULL || filename == NULL || filename[0] == '\0') {
@@ -236,7 +305,7 @@ DBStatus db_load(Database *db, const char *filename)
             int ch;
 
             while ((ch = fgetc(file)) != '\n' && ch != EOF) {
-                /* Discard the rest of the oversized line. */
+                /* Discard oversized line. */
             }
 
             fclose(file);
