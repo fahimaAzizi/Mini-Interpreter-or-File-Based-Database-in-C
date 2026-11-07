@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.15)
 
 project(F6_Database
@@ -26,7 +27,7 @@ if(CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
     )
 endif()
 
-# Original menu application
+# Original database application
 add_executable(f6_database
     src/main.c
 )
@@ -52,7 +53,7 @@ target_link_libraries(f6_interpreter PRIVATE
     f6_database_lib
 )
 
-# Automated database tests
+# Automated tests
 enable_testing()
 
 add_executable(test_database
