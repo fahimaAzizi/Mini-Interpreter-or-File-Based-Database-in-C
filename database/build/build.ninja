@@ -104,6 +104,65 @@ build f6_database.exe: C_EXECUTABLE_LINKER__f6_database_ CMakeFiles/f6_database.
   TARGET_SUPPORT_DIR = CMakeFiles\f6_database.dir
 
 # =============================================================================
+# Object build statements for EXECUTABLE target f6_interpreter
+
+
+#############################################
+# Order-only phony target for f6_interpreter
+
+build cmake_object_order_depends_target_f6_interpreter: phony || cmake_object_order_depends_target_f6_database_lib
+
+build CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/main.c.obj: C_COMPILER__f6_interpreter_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/interpreter/src/main.c || cmake_object_order_depends_target_f6_interpreter
+  DEP_FILE = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src\main.c.obj.d
+  FLAGS = -std=c11
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src" -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/../interpreter/src"
+  OBJECT_DIR = CMakeFiles\f6_interpreter.dir
+  OBJECT_FILE_DIR = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src
+  TARGET_SUPPORT_DIR = CMakeFiles\f6_interpreter.dir
+
+build CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj: C_COMPILER__f6_interpreter_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/interpreter/src/commands.c || cmake_object_order_depends_target_f6_interpreter
+  DEP_FILE = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src\commands.c.obj.d
+  FLAGS = -std=c11
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src" -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/../interpreter/src"
+  OBJECT_DIR = CMakeFiles\f6_interpreter.dir
+  OBJECT_FILE_DIR = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src
+  TARGET_SUPPORT_DIR = CMakeFiles\f6_interpreter.dir
+
+build CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj: C_COMPILER__f6_interpreter_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/interpreter/src/lexer.c || cmake_object_order_depends_target_f6_interpreter
+  DEP_FILE = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src\lexer.c.obj.d
+  FLAGS = -std=c11
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src" -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/../interpreter/src"
+  OBJECT_DIR = CMakeFiles\f6_interpreter.dir
+  OBJECT_FILE_DIR = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src
+  TARGET_SUPPORT_DIR = CMakeFiles\f6_interpreter.dir
+
+build CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj: C_COMPILER__f6_interpreter_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/interpreter/src/parser.c || cmake_object_order_depends_target_f6_interpreter
+  DEP_FILE = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src\parser.c.obj.d
+  FLAGS = -std=c11
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src" -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/../interpreter/src"
+  OBJECT_DIR = CMakeFiles\f6_interpreter.dir
+  OBJECT_FILE_DIR = CMakeFiles\f6_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src
+  TARGET_SUPPORT_DIR = CMakeFiles\f6_interpreter.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target f6_interpreter
+
+
+#############################################
+# Link the executable f6_interpreter.exe
+
+build f6_interpreter.exe: C_EXECUTABLE_LINKER__f6_interpreter_ CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/main.c.obj CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj | libf6_database_lib.a || libf6_database_lib.a
+  LINK_LIBRARIES = libf6_database_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\f6_interpreter.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = f6_interpreter.exe
+  TARGET_IMPLIB = libf6_interpreter.dll.a
+  TARGET_PDB = f6_interpreter.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\f6_interpreter.dir
+
+# =============================================================================
 # Object build statements for EXECUTABLE target test_database
 
 
@@ -181,6 +240,8 @@ build f6_database: phony f6_database.exe
 
 build f6_database_lib: phony libf6_database_lib.a
 
+build f6_interpreter: phony f6_interpreter.exe
+
 build test_database: phony test_database.exe
 
 # =============================================================================
@@ -191,7 +252,7 @@ build test_database: phony test_database.exe
 #############################################
 # Folder: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
 
-build all: phony libf6_database_lib.a f6_database.exe test_database.exe
+build all: phony libf6_database_lib.a f6_database.exe f6_interpreter.exe test_database.exe
 
 # =============================================================================
 # Built-in targets

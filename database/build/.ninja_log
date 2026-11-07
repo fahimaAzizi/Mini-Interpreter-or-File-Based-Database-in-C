@@ -6,6 +6,10 @@
 1613	1904	8156116546488937	libf6_database_lib.a	fbaedc3368f2e059
 1930	2259	8156116549662529	test_database.exe	abb5c497e093ea77
 23	72	8156116529294994	clean	7cad43144eea5c8
-5	23	8157614436985253	help	29d8b3481edbdde9
-4	23	8157624660797905	help	29d8b3481edbdde9
 14	35	8157627438500859	help	29d8b3481edbdde9
+6109	16660	8157897038864173	build.ninja	3826b4a72610c78d
+6109	16660	8157897038864173	C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/cmake_install.cmake	3826b4a72610c78d
+6109	16660	8157897038864173	C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CTestTestfile.cmake	3826b4a72610c78d
+41	67	8157897040053431	help	29d8b3481edbdde9
+13234	17032	8157897522953231	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/main.c.obj	4b85c8d4028336c5
+13243	17035	8157897523109472	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj	9c1b397803f14938
