@@ -1,4 +1,3 @@
-
 cmake_minimum_required(VERSION 3.15)
 
 project(F6_Database
@@ -16,8 +15,7 @@ add_library(f6_database_lib
 )
 
 target_include_directories(f6_database_lib
-    PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/src
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 # Compiler warnings
@@ -53,7 +51,7 @@ target_link_libraries(f6_interpreter PRIVATE
     f6_database_lib
 )
 
-# Automated tests
+# Database tests
 enable_testing()
 
 add_executable(test_database
@@ -67,4 +65,21 @@ target_link_libraries(test_database PRIVATE
 add_test(
     NAME database_tests
     COMMAND test_database
+)
+
+# Interpreter tests
+add_executable(test_interpreter
+    ../interpreter/tests/test_interpreter.c
+    ../interpreter/src/lexer.c
+    ../interpreter/src/parser.c
+)
+
+target_include_directories(test_interpreter PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/../interpreter/src
+)
+
+add_test(
+    NAME interpreter_tests
+    COMMAND test_interpreter
 )
