@@ -1,3 +1,4 @@
+
 #include "lexer.h"
 #include "parser.h"
 
@@ -54,6 +55,44 @@ static void test_lexer(void)
     CHECK(
         !lexer_tokenize("SET city \"Quetta", &tokens),
         "Rejects unmatched quotation marks"
+    );
+
+    CHECK(
+        lexer_tokenize(
+            "SET message \"She said \\\"Hello\\\"\"",
+            &tokens
+        ) &&
+        tokens.count == 3 &&
+        strcmp(
+            tokens.tokens[2],
+            "She said \"Hello\""
+        ) == 0,
+        "Supports escaped quotation marks"
+    );
+
+    CHECK(
+        lexer_tokenize(
+            "SET path \"C:\\\\temp\"",
+            &tokens
+        ) &&
+        strcmp(tokens.tokens[2], "C:\\temp") == 0,
+        "Supports escaped backslashes"
+    );
+
+    CHECK(
+        !lexer_tokenize(
+            "SET key \"value\"extra",
+            &tokens
+        ),
+        "Rejects text after closing quotation marks"
+    );
+
+    CHECK(
+        !lexer_tokenize(
+            "SET key \"bad\\nvalue\"",
+            &tokens
+        ),
+        "Rejects unsupported escape sequences"
     );
 }
 
