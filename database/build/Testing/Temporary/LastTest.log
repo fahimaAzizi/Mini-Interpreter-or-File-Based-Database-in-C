@@ -1,10 +1,10 @@
-Start testing: Nov 10 20:58 Pakistan Standard Time
+Start testing: Nov 11 16:41 Pakistan Standard Time
 ----------------------------------------------------------
-1/1 Testing: database_tests
-1/1 Test: database_tests
+1/2 Testing: database_tests
+1/2 Test: database_tests
 Command: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_database.exe"
 Directory: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
-"database_tests" start time: Nov 10 20:58 Pakistan Standard Time
+"database_tests" start time: Nov 11 16:41 Pakistan Standard Time
 Output:
 ----------------------------------------------------------
 Running database tests...
@@ -15,11 +15,48 @@ Tests failed: 0
 
 All tests passed!
 <end of output>
-Test time =   0.08 sec
+Test time =   0.15 sec
 ----------------------------------------------------------
 Test Passed.
-"database_tests" end time: Nov 10 20:58 Pakistan Standard Time
+"database_tests" end time: Nov 11 16:41 Pakistan Standard Time
 "database_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 10 20:58 Pakistan Standard Time
+2/2 Testing: interpreter_tests
+2/2 Test: interpreter_tests
+Command: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_interpreter.exe"
+Directory: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
+"interpreter_tests" start time: Nov 11 16:41 Pakistan Standard Time
+Output:
+----------------------------------------------------------
+
+========== F6 INTERPRETER TESTS ==========
+
+[PASS] Tokenizes GET command
+[PASS] Tokenizes quoted values
+[PASS] Accepts empty input
+[PASS] Rejects too many tokens
+[PASS] Rejects unmatched quotation marks
+[PASS] Parses SET command
+[PASS] Parses GET command
+[PASS] Parses UPDATE command
+[PASS] Parses DELETE command
+[PASS] Parses LIST command
+[PASS] Parses SAVE command
+[PASS] Parses HELP command
+[PASS] Parses EXIT command
+[PASS] Rejects missing GET argument
+[PASS] Rejects unknown commands
+
+==========================================
+Tests passed: 15/15
+ALL INTERPRETER TESTS PASSED!
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"interpreter_tests" end time: Nov 11 16:41 Pakistan Standard Time
+"interpreter_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 11 16:41 Pakistan Standard Time
