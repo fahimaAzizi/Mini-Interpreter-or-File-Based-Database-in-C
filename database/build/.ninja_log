@@ -19,3 +19,8 @@
 56	1563	8160298308083812	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj	4dfd7565abf9d859
 42	1585	8160298307928530	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj	47a751b935d562b9
 1586	2867	8160298323364864	test_interpreter.exe	798f1b5c8bf134b1
+1956	7114	8161998245768556	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj	4dfd7565abf9d859
+229	7137	8161998228495196	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj	cf9809397284beb1
+1945	7270	8161998245658539	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj	47a751b935d562b9
+7270	8809	8161998298911454	test_interpreter.exe	798f1b5c8bf134b1
+7179	8817	8161998298158494	f6_interpreter.exe	97ea26b2adbd332e
