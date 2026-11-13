@@ -1,3 +1,4 @@
+
 #ifndef PARSER_H
 #define PARSER_H
 
@@ -12,7 +13,9 @@ typedef enum {
     CMD_LIST,
     CMD_SAVE,
     CMD_HELP,
-    CMD_EXIT
+    CMD_EXIT,
+    CMD_BACKUP,
+    CMD_RESTORE
 } CommandType;
 
 typedef struct {
