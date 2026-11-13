@@ -1,3 +1,4 @@
+
 #include "parser.h"
 
 #include <string.h>
@@ -27,9 +28,7 @@ int parser_parse(const TokenList *tokens, ParsedCommand *command)
     if (strcmp(operation, "SET") == 0) {
         command->type = CMD_SET;
 
-        if (tokens->count != 3) {
-            return 0;
-        }
+        if (tokens->count != 3) return 0;
 
         return copy_token(command->key, tokens->tokens[1]) &&
                copy_token(command->value, tokens->tokens[2]);
@@ -38,9 +37,7 @@ int parser_parse(const TokenList *tokens, ParsedCommand *command)
     if (strcmp(operation, "GET") == 0) {
         command->type = CMD_GET;
 
-        if (tokens->count != 2) {
-            return 0;
-        }
+        if (tokens->count != 2) return 0;
 
         return copy_token(command->key, tokens->tokens[1]);
     }
@@ -48,9 +45,7 @@ int parser_parse(const TokenList *tokens, ParsedCommand *command)
     if (strcmp(operation, "UPDATE") == 0) {
         command->type = CMD_UPDATE;
 
-        if (tokens->count != 3) {
-            return 0;
-        }
+        if (tokens->count != 3) return 0;
 
         return copy_token(command->key, tokens->tokens[1]) &&
                copy_token(command->value, tokens->tokens[2]);
@@ -59,9 +54,7 @@ int parser_parse(const TokenList *tokens, ParsedCommand *command)
     if (strcmp(operation, "DELETE") == 0) {
         command->type = CMD_DELETE;
 
-        if (tokens->count != 2) {
-            return 0;
-        }
+        if (tokens->count != 2) return 0;
 
         return copy_token(command->key, tokens->tokens[1]);
     }
@@ -73,6 +66,16 @@ int parser_parse(const TokenList *tokens, ParsedCommand *command)
 
     if (strcmp(operation, "SAVE") == 0) {
         command->type = CMD_SAVE;
+        return tokens->count == 1;
+    }
+
+    if (strcmp(operation, "BACKUP") == 0) {
+        command->type = CMD_BACKUP;
+        return tokens->count == 1;
+    }
+
+    if (strcmp(operation, "RESTORE") == 0) {
+        command->type = CMD_RESTORE;
         return tokens->count == 1;
     }
 
