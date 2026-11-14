@@ -1,9 +1,13 @@
 
+#include "interpreter.h"
 #include "lexer.h"
 #include "parser.h"
 
 #include <stdio.h>
 #include <string.h>
+
+#define TEST_DATABASE_FILE "f6_interpreter_test.dat"
+#define TEST_BACKUP_FILE "f6_interpreter_test.dat.bak"
 
 static int tests_run = 0;
 static int tests_passed = 0;
@@ -18,6 +22,26 @@ static int tests_passed = 0;
             printf("[FAIL] %s\n", description);   \
         }                                         \
     } while (0)
+
+static int file_exists(const char *filename)
+{
+    FILE *file = fopen(filename, "r");
+
+    if (file == NULL) {
+        return 0;
+    }
+
+    fclose(file);
+    return 1;
+}
+
+static void cleanup_test_files(void)
+{
+    remove(TEST_DATABASE_FILE);
+    remove(TEST_BACKUP_FILE);
+    remove("f6_interpreter_test.dat.tmp");
+    remove("f6_interpreter_test.dat.bak.tmp");
+}
 
 static void test_lexer(void)
 {
@@ -63,10 +87,7 @@ static void test_lexer(void)
             &tokens
         ) &&
         tokens.count == 3 &&
-        strcmp(
-            tokens.tokens[2],
-            "She said \"Hello\""
-        ) == 0,
+        strcmp(tokens.tokens[2], "She said \"Hello\"") == 0,
         "Supports escaped quotation marks"
     );
 
@@ -124,53 +145,45 @@ static void check_command(
 
 static void test_parser(void)
 {
-    check_command(
-        "SET city \"Quetta\"",
-        CMD_SET, "city", "Quetta",
-        "Parses SET command"
-    );
+    check_command("SET city \"Quetta\"",
+                  CMD_SET, "city", "Quetta",
+                  "Parses SET command");
 
-    check_command(
-        "GET city",
-        CMD_GET, "city", "",
-        "Parses GET command"
-    );
+    check_command("GET city",
+                  CMD_GET, "city", "",
+                  "Parses GET command");
 
-    check_command(
-        "UPDATE city \"Quetta\"",
-        CMD_UPDATE, "city", "Quetta",
-        "Parses UPDATE command"
-    );
+    check_command("UPDATE city \"Quetta\"",
+                  CMD_UPDATE, "city", "Quetta",
+                  "Parses UPDATE command");
 
-    check_command(
-        "DELETE city",
-        CMD_DELETE, "city", "",
-        "Parses DELETE command"
-    );
+    check_command("DELETE city",
+                  CMD_DELETE, "city", "",
+                  "Parses DELETE command");
 
-    check_command(
-        "LIST",
-        CMD_LIST, "", "",
-        "Parses LIST command"
-    );
+    check_command("LIST",
+                  CMD_LIST, "", "",
+                  "Parses LIST command");
 
-    check_command(
-        "SAVE",
-        CMD_SAVE, "", "",
-        "Parses SAVE command"
-    );
+    check_command("SAVE",
+                  CMD_SAVE, "", "",
+                  "Parses SAVE command");
 
-    check_command(
-        "HELP",
-        CMD_HELP, "", "",
-        "Parses HELP command"
-    );
+    check_command("BACKUP",
+                  CMD_BACKUP, "", "",
+                  "Parses BACKUP command");
 
-    check_command(
-        "EXIT",
-        CMD_EXIT, "", "",
-        "Parses EXIT command"
-    );
+    check_command("RESTORE",
+                  CMD_RESTORE, "", "",
+                  "Parses RESTORE command");
+
+    check_command("HELP",
+                  CMD_HELP, "", "",
+                  "Parses HELP command");
+
+    check_command("EXIT",
+                  CMD_EXIT, "", "",
+                  "Parses EXIT command");
 
     TokenList tokens;
     ParsedCommand command;
@@ -190,12 +203,125 @@ static void test_parser(void)
     );
 }
 
+static void test_backup_restore(void)
+{
+    Database db;
+    char value[MAX_VALUE_LENGTH];
+
+    db_init(&db);
+    cleanup_test_files();
+
+    DBStatus status = db_create(
+        &db,
+        "sample",
+        "original"
+    );
+
+    CHECK(
+        status == DB_SUCCESS,
+        "Creates test database record"
+    );
+
+    status = db_save(&db, TEST_DATABASE_FILE);
+
+    CHECK(
+        status == DB_SUCCESS,
+        "Saves isolated test database"
+    );
+
+    interpreter_execute(&db, "BACKUP", TEST_DATABASE_FILE);
+
+    CHECK(
+        file_exists(TEST_BACKUP_FILE),
+        "BACKUP creates backup file"
+    );
+
+    interpreter_execute(
+        &db,
+        "UPDATE sample \"changed\"",
+        TEST_DATABASE_FILE
+    );
+
+    status = db_read(
+        &db,
+        "sample",
+        value,
+        sizeof(value)
+    );
+
+    CHECK(
+        status == DB_SUCCESS && strcmp(value, "changed") == 0,
+        "Updates record before restore"
+    );
+
+    interpreter_execute(&db, "RESTORE", TEST_DATABASE_FILE);
+
+    status = db_read(
+        &db,
+        "sample",
+        value,
+        sizeof(value)
+    );
+
+    CHECK(
+        status == DB_SUCCESS && strcmp(value, "original") == 0,
+        "RESTORE recovers original value"
+    );
+
+    remove(TEST_BACKUP_FILE);
+
+    db_update(&db, "sample", "current");
+
+    interpreter_execute(&db, "RESTORE", TEST_DATABASE_FILE);
+
+    status = db_read(
+        &db,
+        "sample",
+        value,
+        sizeof(value)
+    );
+
+    CHECK(
+        status == DB_SUCCESS && strcmp(value, "current") == 0,
+        "Missing backup does not change current data"
+    );
+
+    FILE *corrupt = fopen(TEST_BACKUP_FILE, "w");
+
+    if (corrupt != NULL) {
+        fputs("this is not a valid database record\n", corrupt);
+        fclose(corrupt);
+    }
+
+    CHECK(
+        file_exists(TEST_BACKUP_FILE),
+        "Creates corrupted backup test file"
+    );
+
+    interpreter_execute(&db, "RESTORE", TEST_DATABASE_FILE);
+
+    status = db_read(
+        &db,
+        "sample",
+        value,
+        sizeof(value)
+    );
+
+    CHECK(
+        status == DB_SUCCESS && strcmp(value, "current") == 0,
+        "Corrupted backup does not change current data"
+    );
+
+    cleanup_test_files();
+}
+
 int main(void)
 {
     printf("\n========== F6 INTERPRETER TESTS ==========\n\n");
 
     test_lexer();
     test_parser();
+    test_backup_restore();
 
     printf("\n==========================================\n");
     printf("Tests passed: %d/%d\n", tests_passed, tests_run);
