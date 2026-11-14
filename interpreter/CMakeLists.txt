@@ -68,10 +68,26 @@ add_test(
 )
 
 # Interpreter tests
+# Interpreter tests
 add_executable(test_interpreter
     ../interpreter/tests/test_interpreter.c
+    ../interpreter/src/commands.c
     ../interpreter/src/lexer.c
     ../interpreter/src/parser.c
+)
+
+target_include_directories(test_interpreter PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/../interpreter/src
+)
+
+target_link_libraries(test_interpreter PRIVATE
+    f6_database_lib
+)
+
+add_test(
+    NAME interpreter_tests
+    COMMAND test_interpreter
 )
 
 target_include_directories(test_interpreter PRIVATE
