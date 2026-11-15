@@ -1,10 +1,10 @@
-Start testing: Nov 14 22:52 Pakistan Standard Time
+Start testing: Nov 15 22:55 Pakistan Standard Time
 ----------------------------------------------------------
 1/2 Testing: database_tests
 1/2 Test: database_tests
 Command: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_database.exe"
 Directory: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
-"database_tests" start time: Nov 14 22:52 Pakistan Standard Time
+"database_tests" start time: Nov 15 22:55 Pakistan Standard Time
 Output:
 ----------------------------------------------------------
 Running database tests...
@@ -15,10 +15,10 @@ Tests failed: 0
 
 All tests passed!
 <end of output>
-Test time =   0.10 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"database_tests" end time: Nov 14 22:52 Pakistan Standard Time
+"database_tests" end time: Nov 15 22:55 Pakistan Standard Time
 "database_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,8 +34,8 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"interpreter_tests" end time: Nov 14 22:52 Pakistan Standard Time
+"interpreter_tests" end time: Nov 15 22:55 Pakistan Standard Time
 "interpreter_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 14 22:52 Pakistan Standard Time
+End testing: Nov 15 22:55 Pakistan Standard Time

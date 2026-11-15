@@ -7,9 +7,9 @@
 1930	2259	8156116549662529	test_database.exe	abb5c497e093ea77
 23	72	8156116529294994	clean	7cad43144eea5c8
 7	47	8160296069662574	help	29d8b3481edbdde9
-6109	16660	8163819507274857	build.ninja	3826b4a72610c78d
-6109	16660	8163819507124910	C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/cmake_install.cmake	3826b4a72610c78d
-6109	16660	8163819507164860	C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CTestTestfile.cmake	3826b4a72610c78d
+6109	16660	8164685432672239	build.ninja	3826b4a72610c78d
+6109	16660	8164685432512055	C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/cmake_install.cmake	3826b4a72610c78d
+6109	16660	8164685432532051	C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CTestTestfile.cmake	3826b4a72610c78d
 13234	17032	8157897522953231	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/main.c.obj	4b85c8d4028336c5
 184	3087	8162965773837511	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj	9c1b397803f14938
 541	3166	8162965777409702	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj	3934c55f8ac55959
@@ -17,6 +17,6 @@
 3170	4960	8162965803699514	f6_interpreter.exe	97ea26b2adbd332e
 585	3124	8162965777901046	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj	5c02cad6bf520299
 1956	7114	8161998245768556	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj	4dfd7565abf9d859
-564	3058	8162965777641912	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj	47a751b935d562b9
-3126	4955	8162965803200247	test_interpreter.exe	798f1b5c8bf134b1
 128	2001	8163819553814844	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj	47a751b935d562b9
+3126	4955	8162965803200247	test_interpreter.exe	798f1b5c8bf134b1
+468	1017	8164685479450881	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj	47a751b935d562b9
