@@ -7,4 +7,4 @@
 add_test(database_tests "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_database.exe")
 set_tests_properties(database_tests PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/CMakeLists.txt;63;add_test;C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/CMakeLists.txt;0;")
 add_test(interpreter_tests "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_interpreter.exe")
-set_tests_properties(interpreter_tests PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/CMakeLists.txt;80;add_test;C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/CMakeLists.txt;0;")
+set_tests_properties(interpreter_tests PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/CMakeLists.txt;85;add_test;C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/CMakeLists.txt;0;")

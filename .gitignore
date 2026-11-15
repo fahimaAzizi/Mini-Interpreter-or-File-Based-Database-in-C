@@ -1,0 +1,27 @@
+
+# CMake build directories
+build/
+cmake-build-*/
+
+# Generated build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+.ninja_deps
+.ninja_log
+build.ninja
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.a
+*.lib
+
+# Test output
+Testing/
+
+# Temporary database files
+*.tmp

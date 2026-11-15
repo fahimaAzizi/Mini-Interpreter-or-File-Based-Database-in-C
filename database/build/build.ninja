@@ -204,7 +204,7 @@ build test_database.exe: C_EXECUTABLE_LINKER__test_database_ CMakeFiles/test_dat
 #############################################
 # Order-only phony target for test_interpreter
 
-build cmake_object_order_depends_target_test_interpreter: phony || .
+build cmake_object_order_depends_target_test_interpreter: phony || cmake_object_order_depends_target_f6_database_lib
 
 build CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj: C_COMPILER__test_interpreter_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/interpreter/tests/test_interpreter.c || cmake_object_order_depends_target_test_interpreter
   DEP_FILE = CMakeFiles\test_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\tests\test_interpreter.c.obj.d
@@ -212,6 +212,14 @@ build CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpr
   INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src" -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/../interpreter/src"
   OBJECT_DIR = CMakeFiles\test_interpreter.dir
   OBJECT_FILE_DIR = CMakeFiles\test_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\test_interpreter.dir
+
+build CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj: C_COMPILER__test_interpreter_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/interpreter/src/commands.c || cmake_object_order_depends_target_test_interpreter
+  DEP_FILE = CMakeFiles\test_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src\commands.c.obj.d
+  FLAGS = -std=c11
+  INCLUDES = -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/src" -I"C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/../interpreter/src"
+  OBJECT_DIR = CMakeFiles\test_interpreter.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_interpreter.dir\C_\Users\Mcm\OneDrive\Desktop\Mini_Interpreter_or_File-Based_Database_in_C\interpreter\src
   TARGET_SUPPORT_DIR = CMakeFiles\test_interpreter.dir
 
 build CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj: C_COMPILER__test_interpreter_unscanned_ C$:/Users/Mcm/OneDrive/Desktop/Mini$ Interpreter$ or$ File-Based$ Database$ in$ C/interpreter/src/lexer.c || cmake_object_order_depends_target_test_interpreter
@@ -238,8 +246,8 @@ build CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpr
 #############################################
 # Link the executable test_interpreter.exe
 
-build test_interpreter.exe: C_EXECUTABLE_LINKER__test_interpreter_ CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build test_interpreter.exe: C_EXECUTABLE_LINKER__test_interpreter_ CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj | libf6_database_lib.a || libf6_database_lib.a
+  LINK_LIBRARIES = libf6_database_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_interpreter.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
