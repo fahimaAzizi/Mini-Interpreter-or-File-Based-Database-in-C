@@ -15,7 +15,10 @@ typedef enum {
     CMD_HELP,
     CMD_EXIT,
     CMD_BACKUP,
-    CMD_RESTORE
+    CMD_RESTORE,
+    CMD_BEGIN,
+    CMD_COMMIT,
+    CMD_ROLLBACK
 } CommandType;
 
 typedef struct {
