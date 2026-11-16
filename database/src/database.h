@@ -1,3 +1,4 @@
+
 #ifndef DATABASE_H
 #define DATABASE_H
 
@@ -19,7 +20,9 @@ typedef enum {
     DB_ERROR_FILE_WRITE,
     DB_ERROR_FILE_READ,
     DB_ERROR_CORRUPTED_FILE,
-    DB_ERROR_BUFFER_TOO_SMALL
+    DB_ERROR_BUFFER_TOO_SMALL,
+    DB_ERROR_TRANSACTION_ACTIVE,
+    DB_ERROR_NO_TRANSACTION
 } DBStatus;
 
 typedef struct {
@@ -30,10 +33,17 @@ typedef struct {
 typedef struct {
     Record records[MAX_RECORDS];
 
-    /* Hash table: each occupied slot stores a record index. */
+    /* Hash table */
     size_t index[INDEX_SIZE];
 
     size_t count;
+
+    /* Transaction snapshot */
+    Record transaction_records[MAX_RECORDS];
+    size_t transaction_index[INDEX_SIZE];
+    size_t transaction_count;
+    int transaction_active;
+
 } Database;
 
 void db_init(Database *db);
@@ -54,6 +64,13 @@ DBStatus db_delete(Database *db, const char *key);
 DBStatus db_save(const Database *db, const char *filename);
 
 DBStatus db_load(Database *db, const char *filename);
+
+/* Transaction operations */
+DBStatus db_transaction_begin(Database *db);
+
+DBStatus db_transaction_commit(Database *db, const char *filename);
+
+DBStatus db_transaction_rollback(Database *db);
 
 const char *db_status_message(DBStatus status);
 
