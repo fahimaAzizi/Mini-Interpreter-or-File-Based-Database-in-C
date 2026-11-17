@@ -1,3 +1,4 @@
-database_tests 17 0.00158133
-interpreter_tests 4 0.0264976
+database_tests 22 0.000871082
+interpreter_tests 4 0
 ---
+interpreter_tests

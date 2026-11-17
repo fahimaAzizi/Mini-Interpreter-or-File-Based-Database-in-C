@@ -24,3 +24,18 @@
 11	1866	8164689316145461	C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/CTestTestfile.cmake	3826b4a72610c78d
 30	828	8164689317005530	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj	5cf230d7221927df
 830	1162	8164689325005158	test_interpreter.exe	273ae4e4b0244dd7
+423	2262	8166575436122712	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj	cf9809397284beb1
+485	2307	8166575436782505	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/lexer.c.obj	4dfd7565abf9d859
+392	2310	8166575435915534	CMakeFiles/f6_database.dir/src/main.c.obj	936e7d70dfed169e
+458	2312	8166575436449286	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/tests/test_interpreter.c.obj	47a751b935d562b9
+472	2317	8166575436624426	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj	5cf230d7221927df
+400	2320	8166575435930563	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/main.c.obj	4b85c8d4028336c5
+409	2322	8166575436122712	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj	9c1b397803f14938
+449	2324	8166575436449286	CMakeFiles/test_database.dir/tests/test_database.c.obj	e9c0b571a1ddfe20
+437	6112	8166575436283649	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj	3934c55f8ac55959
+2285	6128	8166575454943875	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj	5c02cad6bf520299
+125	6131	8166575433226918	CMakeFiles/f6_database_lib.dir/src/database.c.obj	d20274b37ec00687
+6132	6616	8166575493312569	libf6_database_lib.a	fbaedc3368f2e059
+6646	7665	8166575498366859	test_database.exe	abb5c497e093ea77
+6616	7666	8166575498166192	f6_database.exe	63781417bddfc0cf
+4	21	8166576893076820	help	29d8b3481edbdde9
