@@ -39,3 +39,5 @@
 6646	7665	8166575498366859	test_database.exe	abb5c497e093ea77
 6616	7666	8166575498166192	f6_database.exe	63781417bddfc0cf
 4	21	8166576893076820	help	29d8b3481edbdde9
+22	170	8166579333942222	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj	5c02cad6bf520299
+172	389	8166579335438570	test_interpreter.exe	273ae4e4b0244dd7

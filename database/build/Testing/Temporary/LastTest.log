@@ -1,10 +1,10 @@
-Start testing: Nov 18 03:27 Pakistan Standard Time
+Start testing: Nov 18 03:32 Pakistan Standard Time
 ----------------------------------------------------------
 1/2 Testing: database_tests
 1/2 Test: database_tests
 Command: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_database.exe"
 Directory: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
-"database_tests" start time: Nov 18 03:27 Pakistan Standard Time
+"database_tests" start time: Nov 18 03:32 Pakistan Standard Time
 Output:
 ----------------------------------------------------------
 Running database tests...
@@ -18,24 +18,65 @@ All tests passed!
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"database_tests" end time: Nov 18 03:27 Pakistan Standard Time
+"database_tests" end time: Nov 18 03:32 Pakistan Standard Time
 "database_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-Unable to find executable: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_interpreter.exe
 2/2 Testing: interpreter_tests
 2/2 Test: interpreter_tests
-Command: ""
+Command: "C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build/test_interpreter.exe"
 Directory: C:/Users/Mcm/OneDrive/Desktop/Mini Interpreter or File-Based Database in C/database/build
-"interpreter_tests" start time: 
+"interpreter_tests" start time: Nov 18 03:32 Pakistan Standard Time
 Output:
 ----------------------------------------------------------
+
+========== F6 INTERPRETER TESTS ==========
+
+[PASS] Tokenizes GET command
+[PASS] Tokenizes quoted values
+[PASS] Accepts empty input
+[PASS] Rejects too many tokens
+[PASS] Rejects unmatched quotation marks
+[PASS] Supports escaped quotation marks
+[PASS] Supports escaped backslashes
+[PASS] Rejects text after closing quotation marks
+[PASS] Rejects unsupported escape sequences
+[PASS] Parses SET command
+[PASS] Parses GET command
+[PASS] Parses UPDATE command
+[PASS] Parses DELETE command
+[PASS] Parses LIST command
+[PASS] Parses SAVE command
+[PASS] Parses BACKUP command
+[PASS] Parses RESTORE command
+[PASS] Parses HELP command
+[PASS] Parses EXIT command
+[PASS] Rejects missing GET argument
+[PASS] Rejects unknown commands
+[PASS] Creates test database record
+[PASS] Saves isolated test database
+OK: Backup created: f6_interpreter_test.dat.bak
+[PASS] BACKUP creates backup file
+OK: Record updated.
+Saved successfully.
+[PASS] Updates record before restore
+OK: Database restored from f6_interpreter_test.dat.bak
+[PASS] RESTORE recovers original value
+ERROR: Backup could not be loaded: ERROR: Could not open the database file.
+[PASS] Missing backup does not change current data
+[PASS] Creates corrupted backup test file
+ERROR: Backup could not be loaded: ERROR: Database file is corrupted.
+[PASS] Corrupted backup does not change current data
+
+==========================================
+Tests passed: 29/29
+ALL INTERPRETER TESTS PASSED!
 <end of output>
-Test time =   0.00 sec
+Test time =   0.10 sec
 ----------------------------------------------------------
 Test Passed.
-"interpreter_tests" end time: Nov 18 03:27 Pakistan Standard Time
+"interpreter_tests" end time: Nov 18 03:32 Pakistan Standard Time
 "interpreter_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 18 03:27 Pakistan Standard Time
+End testing: Nov 18 03:32 Pakistan Standard Time

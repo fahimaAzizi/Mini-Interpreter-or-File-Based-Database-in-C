@@ -32,6 +32,11 @@ static void save_after_change(
     const char *filename
 )
 {
+    if (db->transaction_active) {
+        printf("Transaction active: change not saved yet.\n");
+        return;
+    }
+
     DBStatus status = db_save(db, filename);
 
     if (status != DB_SUCCESS) {
@@ -132,6 +137,9 @@ void interpreter_print_help(void)
     printf("SAVE                   Save database\n");
     printf("BACKUP                 Create database backup\n");
     printf("RESTORE                Restore database backup\n");
+    printf("BEGIN                  Start transaction\n");
+    printf("COMMIT                 Save transaction changes\n");
+    printf("ROLLBACK               Undo transaction changes\n");
     printf("HELP                   Show help\n");
     printf("EXIT                   Exit interpreter\n");
     printf("==========================================\n\n");
@@ -214,6 +222,11 @@ InterpreterResult interpreter_execute(
             break;
 
         case CMD_SAVE:
+            if (db->transaction_active) {
+                printf("ERROR: Cannot SAVE during a transaction. Use COMMIT or ROLLBACK.\n");
+                break;
+            }
+
             status = db_save(db, filename);
             if (status == DB_SUCCESS) {
                 printf("OK: Database saved.\n");
@@ -223,11 +236,48 @@ InterpreterResult interpreter_execute(
             break;
 
         case CMD_BACKUP:
+            if (db->transaction_active) {
+                printf("ERROR: Cannot BACKUP during a transaction.\n");
+                break;
+            }
+
             create_backup(db, filename);
             break;
 
         case CMD_RESTORE:
+            if (db->transaction_active) {
+                printf("ERROR: Cannot RESTORE during a transaction.\n");
+                break;
+            }
+
             restore_backup(db, filename);
+            break;
+
+        case CMD_BEGIN:
+            status = db_transaction_begin(db);
+            if (status == DB_SUCCESS) {
+                printf("OK: Transaction started.\n");
+            } else {
+                print_error(status);
+            }
+            break;
+
+        case CMD_COMMIT:
+            status = db_transaction_commit(db, filename);
+            if (status == DB_SUCCESS) {
+                printf("OK: Transaction committed and saved.\n");
+            } else {
+                print_error(status);
+            }
+            break;
+
+        case CMD_ROLLBACK:
+            status = db_transaction_rollback(db);
+            if (status == DB_SUCCESS) {
+                printf("OK: Transaction rolled back.\n");
+            } else {
+                print_error(status);
+            }
             break;
 
         case CMD_HELP:
@@ -235,6 +285,11 @@ InterpreterResult interpreter_execute(
             break;
 
         case CMD_EXIT:
+            if (db->transaction_active) {
+                printf("ERROR: Active transaction. Use COMMIT or ROLLBACK before EXIT.\n");
+                break;
+            }
+
             printf("Goodbye!\n");
             return INTERPRETER_EXIT;
 
