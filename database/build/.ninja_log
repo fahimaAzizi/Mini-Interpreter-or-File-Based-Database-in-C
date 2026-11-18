@@ -41,3 +41,6 @@
 4	21	8166576893076820	help	29d8b3481edbdde9
 22	170	8166579333942222	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj	5c02cad6bf520299
 172	389	8166579335438570	test_interpreter.exe	273ae4e4b0244dd7
+31	223	8167444892411373	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/parser.c.obj	3934c55f8ac55959
+23	236	8167444892361358	CMakeFiles/f6_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj	9c1b397803f14938
+43	259	8167444892509786	CMakeFiles/test_interpreter.dir/C_/Users/Mcm/OneDrive/Desktop/Mini_Interpreter_or_File-Based_Database_in_C/interpreter/src/commands.c.obj	5cf230d7221927df
